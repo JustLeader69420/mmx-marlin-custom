@@ -1,0 +1,13 @@
+0000000000000000000000000000000000000000 b9bbb6054a4cb3adc6c4caa028fb2ee39fe7a3cd 杜建树 <3008993280@qq.com> 1649321751 +0800	On udisk_2: test change print list
+b9bbb6054a4cb3adc6c4caa028fb2ee39fe7a3cd 114f149561f5e11991c15684dd59fada2d604acf 杜建树 <3008993280@qq.com> 1649322123 +0800	WIP on udisk_2: cd53c571bb Opt:optimize touch clicks
+114f149561f5e11991c15684dd59fada2d604acf 71ca592c9aad7147dbf4059ea587eecb3f98c120 杜建树 <3008993280@qq.com> 1649327005 +0800	WIP on udisk_2: cd53c571bb Opt:optimize touch clicks
+71ca592c9aad7147dbf4059ea587eecb3f98c120 e00138b8ce36fdf6fa6e44daca074889b10489a9 杜建树 <3008993280@qq.com> 1651799835 +0800	WIP on F4Z_MC_23: 753aa32c60 New:use sdio and fix usb power pin
+e00138b8ce36fdf6fa6e44daca074889b10489a9 5d98c01498c115ca93f95ada03ed2ff2a8637b7c 杜建树 <3008993280@qq.com> 1652693315 +0800	WIP on F4Z_MC_23: f556a86326 New:test ws2812 led
+5d98c01498c115ca93f95ada03ed2ff2a8637b7c 50e7aaf6fe7683c980df3873bcb7d4d1696e5919 杜建树 <3008993280@qq.com> 1653983415 +0800	WIP on udisk_2: 1dc98fe492 Test:6609 replace 2208
+50e7aaf6fe7683c980df3873bcb7d4d1696e5919 ed6d165bb4cf1024e7de0a2d862c11a550ba708f 杜建树 <3008993280@qq.com> 1656315202 +0800	WIP on F4Z_MC_23: 51a117a0c4 Fix:adjust the quick_print X&Z axis step(Because I changed the X&Z gears)
+ed6d165bb4cf1024e7de0a2d862c11a550ba708f 13ad1bbd29419fbd2933a2f595d895df4022d278 杜建树 <3008993280@qq.com> 1656743790 +0800	WIP on ATE_motor_2: 102ac8e13b New:the MX2 screen is overturn(0x28)
+13ad1bbd29419fbd2933a2f595d895df4022d278 b5e576701d63a727f8bb3511fcfe9f266a80f887 杜建树 <3008993280@qq.com> 1659951955 +0800	WIP on udisk_2: e3b5c7fda1 Test:add ws2812_led, but don't enabled
+b5e576701d63a727f8bb3511fcfe9f266a80f887 ee349eaaedb4d591f60a74b31c7b992a43e7b284 杜建树 <3008993280@qq.com> 1659952004 +0800	WIP on udisk_2: e3b5c7fda1 Test:add ws2812_led, but don't enabled
+ee349eaaedb4d591f60a74b31c7b992a43e7b284 f3914d609970ad89e80b356bc7123dc0e39fdcee 杜建树 <3008993280@qq.com> 1669361403 +0800	WIP on udisk_2: 6933af8c69 try:add the thumbnail - 1
+f3914d609970ad89e80b356bc7123dc0e39fdcee b1a2623aba9a3481a0e0c9add110ebeac6c2c618 杜建树 <3008993280@qq.com> 1669361476 +0800	WIP on udisk_2: 6933af8c69 try:add the thumbnail - 1
+b1a2623aba9a3481a0e0c9add110ebeac6c2c618 9f879464e5f9a93f091633d2346f8954d84397ac 杜建树 <3008993280@qq.com> 1684919809 +0800	WIP on F4Z_MC_23: f17423a9d4 New:set the fan frequency to 100Hz

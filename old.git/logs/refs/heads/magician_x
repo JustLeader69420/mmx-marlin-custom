@@ -1,0 +1,21 @@
+0000000000000000000000000000000000000000 65fcf8a55bb905f550dd1cc82b16174b52ea6599 杜建树 <3008993280@qq.com> 1669363464 +0800	branch: Created from HEAD
+65fcf8a55bb905f550dd1cc82b16174b52ea6599 b7dd483bb72847ce34c9fbfe71818fe77fc002b6 杜建树 <3008993280@qq.com> 1669363482 +0800	reset: moving to HEAD^
+b7dd483bb72847ce34c9fbfe71818fe77fc002b6 6933af8c69200c61be5d24561d8abd9fc2019d8b 杜建树 <3008993280@qq.com> 1669363486 +0800	reset: moving to HEAD^
+6933af8c69200c61be5d24561d8abd9fc2019d8b 4bac16ba3eab3a11b93c0bd66d24b9950c68224d 杜建树 <3008993280@qq.com> 1669804529 +0800	commit: Fix:optimize USB function
+4bac16ba3eab3a11b93c0bd66d24b9950c68224d 81c1d90c5426a5fd261654d8a9e4a2a4961ac288 杜建树 <3008993280@qq.com> 1669887281 +0800	commit (cherry-pick): Fix:optimize udisk print
+81c1d90c5426a5fd261654d8a9e4a2a4961ac288 24f7c79e1deed2621ee69d4d7f97b47fef68cee3 杜建树 <3008993280@qq.com> 1671243768 +0800	commit: Opt:optimize ABL & support bltouch(need stm8 221216 firmware)
+24f7c79e1deed2621ee69d4d7f97b47fef68cee3 8268c7b76d8e9bec2f160b41c2c4330ccbc8a1a1 杜建树 <3008993280@qq.com> 1672404077 +0800	commit (cherry-pick): Opt:optimize leveling offset & bed pid & PHOTO_GCODE
+8268c7b76d8e9bec2f160b41c2c4330ccbc8a1a1 c36792ca7ea71c3aef4f9960c830039515438a40 杜建树 <3008993280@qq.com> 1672404119 +0800	cherry-pick: New:add endstop interface
+c36792ca7ea71c3aef4f9960c830039515438a40 c922d9058728519253f981913b28a2794e403e9c 杜建树 <3008993280@qq.com> 1672404882 +0800	commit (cherry-pick): Fix:optimize udisk printing & updata version 1.6.7.0
+c922d9058728519253f981913b28a2794e403e9c 0c067b38c749d45cf24b97fb22b34e4be5392cbc 杜建树 <3008993280@qq.com> 1672652713 +0800	commit: Fix:if no POWER_LOSS_PIN is no temprature
+0c067b38c749d45cf24b97fb22b34e4be5392cbc 9939a6eea19064c866aa87346a0e8a6d701e7b89 杜建树 <3008993280@qq.com> 1672992629 +0800	commit: Std:some logic code
+9939a6eea19064c866aa87346a0e8a6d701e7b89 cca4ee9ed5f235744606ed1b62676da08c77f392 杜建树 <3008993280@qq.com> 1677153283 +0800	commit (cherry-pick): Fix:fixed some logic bugs when pause printing(not fully fixed) & no two fans on the first magician x2
+cca4ee9ed5f235744606ed1b62676da08c77f392 197e696c519eb70d290431ddc1ed5536be489f23 杜建树 <3008993280@qq.com> 1677153344 +0800	commit (cherry-pick): New:set z-offset in the Settings interface
+197e696c519eb70d290431ddc1ed5536be489f23 0ab1e96cf6a2e4a6ef473bcc04bc2174fccdd21d 杜建树 <3008993280@qq.com> 1677153452 +0800	commit (cherry-pick): New:open Exponential temperature detection & new PID & add REDRESS_PROBING & ABL show & update version 1.6.7.4
+0ab1e96cf6a2e4a6ef473bcc04bc2174fccdd21d 2e9de21b49b2f9964c147415cbab0212478ad196 杜建树 <3008993280@qq.com> 1677153494 +0800	cherry-pick: Fix:calibration temperature
+2e9de21b49b2f9964c147415cbab0212478ad196 5ca46cc3e786c12d8d7ac84c4f3766cf2ebea119 杜建树 <3008993280@qq.com> 1677154945 +0800	commit (cherry-pick): Opt:add popup when it open babystep
+5ca46cc3e786c12d8d7ac84c4f3766cf2ebea119 e1ae061e45eeabba5622f7f9bdd971cac3a6a7c2 杜建树 <3008993280@qq.com> 1677288315 +0800	commit: New:USE_TI_CHOKE
+e1ae061e45eeabba5622f7f9bdd971cac3a6a7c2 fd37cd3109804f5292e8ded9e74aea230722b16a 杜建树 <3008993280@qq.com> 1679022596 +0800	commit: Fix:Fix:Adjusting non-global babystep affects global babystep(1.6.7.5 V25)
+fd37cd3109804f5292e8ded9e74aea230722b16a abb342371d0574ad050322cb3a4cf354f6715384 杜建树 <3008993280@qq.com> 1685969265 +0800	cherry-pick: Fix:"RuntimeError: deque mutated during iteration:" error.
+abb342371d0574ad050322cb3a4cf354f6715384 d464efffe50fb2dc35d564183cc485cbdb80dab6 杜建树 <3008993280@qq.com> 1686302511 +0800	commit: Add:the auto unload function & optimize ABL set temp
+d464efffe50fb2dc35d564183cc485cbdb80dab6 d464efffe50fb2dc35d564183cc485cbdb80dab6 杜建树 <3008993280@qq.com> 1687744112 +0800	Branch: renamed refs/heads/udisk_3 to refs/heads/magician_x

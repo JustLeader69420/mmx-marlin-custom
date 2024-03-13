@@ -1,0 +1,48 @@
+0000000000000000000000000000000000000000 63363a0f638c91bf2ad4e3e6e1447b2e937b4982 杜建树 <3008993280@qq.com> 1648722043 +0800	branch: Created from HEAD
+63363a0f638c91bf2ad4e3e6e1447b2e937b4982 e5c203471dd935a9d84a0405250a697c6c85b3ba 杜建树 <3008993280@qq.com> 1648783546 +0800	commit: New:open the LIN_ADVANCE
+e5c203471dd935a9d84a0405250a697c6c85b3ba 63363a0f638c91bf2ad4e3e6e1447b2e937b4982 杜建树 <3008993280@qq.com> 1648867353 +0800	reset: moving to 63363a
+63363a0f638c91bf2ad4e3e6e1447b2e937b4982 cd53c571bb57fc313377cb9781b5380ca2831433 杜建树 <3008993280@qq.com> 1648872886 +0800	commit: Opt:optimize touch clicks
+cd53c571bb57fc313377cb9781b5380ca2831433 2f967705a11d573a0d74be25bce9fa21e2b90c0b 杜建树 <3008993280@qq.com> 1649383565 +0800	commit: New:add SD card print popup window
+2f967705a11d573a0d74be25bce9fa21e2b90c0b c94b3a5d618ff28aa2c0bc8deeb1df0437164c3c 杜建树 <3008993280@qq.com> 1649470931 +0800	commit: Opt:optimize Udisk Print
+c94b3a5d618ff28aa2c0bc8deeb1df0437164c3c aa2021c480dff186cf2762451cc34e675168e281 杜建树 <3008993280@qq.com> 1649470990 +0800	commit: Add:add udisk print popup window
+aa2021c480dff186cf2762451cc34e675168e281 c2f6e1520f5040f7881a432ee1377b5201d306ab 杜建树 <3008993280@qq.com> 1650371024 +0800	commit: Opt:optimize fan noise
+c2f6e1520f5040f7881a432ee1377b5201d306ab 12289090064ed147af7ddb92415b2afa2a6e67c1 杜建树 <3008993280@qq.com> 1652350101 +0800	commit (cherry-pick): New:add set leveling offset interface
+12289090064ed147af7ddb92415b2afa2a6e67c1 4011a4f510d2e7e73cc6cf4bd69cdd145b240f26 杜建树 <3008993280@qq.com> 1652350142 +0800	cherry-pick: New:use sdio and fix usb power pin
+4011a4f510d2e7e73cc6cf4bd69cdd145b240f26 139d855931484c1cbdcf04864d5213964298eda0 杜建树 <3008993280@qq.com> 1652350181 +0800	cherry-pick: Fix:impose babystep value
+139d855931484c1cbdcf04864d5213964298eda0 22fbdc086dbdce1883d42230af2fb2fc58fd00db 杜建树 <3008993280@qq.com> 1652350261 +0800	commit (cherry-pick): New:add the fast pwm
+22fbdc086dbdce1883d42230af2fb2fc58fd00db aaf84f9ab4deca4e702a6fad965a21b516ee7170 杜建树 <3008993280@qq.com> 1652350285 +0800	cherry-pick: Fix:enabled the udisk power pin
+aaf84f9ab4deca4e702a6fad965a21b516ee7170 2e69c21ca232fa2487b6f0eed85a20a31f7688c8 杜建树 <3008993280@qq.com> 1652350322 +0800	cherry-pick: Fix:fix SDIO_BUS_WIDE
+2e69c21ca232fa2487b6f0eed85a20a31f7688c8 32da38b38dc6ddcde1cc0f1a15600f761a651bf4 杜建树 <3008993280@qq.com> 1652350468 +0800	commit (cherry-pick): New:test ws2812 led
+32da38b38dc6ddcde1cc0f1a15600f761a651bf4 0abd50077696dbad3968def0261f356cdd10171f 杜建树 <3008993280@qq.com> 1652501250 +0800	commit: New:open LIN_ADVANCE and updata version
+0abd50077696dbad3968def0261f356cdd10171f 01b457d464ae988741f9b8ebc4474f3f88f1e75a 杜建树 <3008993280@qq.com> 1653374992 +0800	cherry-pick: Fix:close SDIO
+01b457d464ae988741f9b8ebc4474f3f88f1e75a 6bf62432f42abeda338b053b23fcf2e2e6be2071 杜建树 <3008993280@qq.com> 1653375057 +0800	commit (cherry-pick): Opt:optimize the screen effect and R4 bed current
+6bf62432f42abeda338b053b23fcf2e2e6be2071 5053d76b0f4def93be3ddd817970fc1a36a67bc8 杜建树 <3008993280@qq.com> 1653443830 +0800	commit: New:add other custom and temp close LIN_ADVANCE
+5053d76b0f4def93be3ddd817970fc1a36a67bc8 102605b451ac88887da7a20d207c363a099d5f78 杜建树 <3008993280@qq.com> 1653652935 +0800	commit: New:adjust leveling location
+102605b451ac88887da7a20d207c363a099d5f78 81c45ff151b59656574f3f4437caa2ccc08b116d 杜建树 <3008993280@qq.com> 1653653007 +0800	commit: test:add the adjust window
+81c45ff151b59656574f3f4437caa2ccc08b116d e9e7258d07bde627889588f826c9991af07bbbb5 杜建树 <3008993280@qq.com> 1653709255 +0800	commit: New:update EEPROM_VERSION
+e9e7258d07bde627889588f826c9991af07bbbb5 1dc98fe492e2f6ac0604013c704012739b088a60 杜建树 <3008993280@qq.com> 1653884760 +0800	cherry-pick: Test:6609 replace 2208
+1dc98fe492e2f6ac0604013c704012739b088a60 4940f90903a32e50cd6d0f820f1afb90af5db763 杜建树 <3008993280@qq.com> 1654565595 +0800	commit: Opt:optimize buzzer sound
+4940f90903a32e50cd6d0f820f1afb90af5db763 6e4334a4d58bc6635f0527dee2d96bd611cbfbbc 杜建树 <3008993280@qq.com> 1654565777 +0800	commit: Fix:6609 short protection disable
+6e4334a4d58bc6635f0527dee2d96bd611cbfbbc a7ac00a4b5fbd40be2a0dece86f287da6911d645 杜建树 <3008993280@qq.com> 1654565872 +0800	commit: New:add the new set leveling interface
+a7ac00a4b5fbd40be2a0dece86f287da6911d645 f4850ef7c64d28eeb94ca1ac3c3fac25d3ccd145 杜建树 <3008993280@qq.com> 1655351623 +0800	commit: New:leveling interface and temporary close leveling location
+f4850ef7c64d28eeb94ca1ac3c3fac25d3ccd145 3f82f57941a7a1adf5f9dbfde05d65e11a22b9e9 杜建树 <3008993280@qq.com> 1655353631 +0800	commit: Opt:optimize pause buzzer sound
+3f82f57941a7a1adf5f9dbfde05d65e11a22b9e9 f87b35087aad67af1d53260eb2c1696acedd1a22 杜建树 <3008993280@qq.com> 1655448191 +0800	commit: New:EEPROM_VERSION V22
+f87b35087aad67af1d53260eb2c1696acedd1a22 30219a4b600e0e6bfd119ee816c6bc4f9fbb7466 杜建树 <3008993280@qq.com> 1655448250 +0800	commit: Fix:corexz Axis Steps and Max Feed
+30219a4b600e0e6bfd119ee816c6bc4f9fbb7466 2792c65ceed68a6502251481848f7f8af6dabdc2 杜建树 <3008993280@qq.com> 1655952792 +0800	commit: Fix:increase WATCH_BED_TEMP_PERIOD
+2792c65ceed68a6502251481848f7f8af6dabdc2 bc6c016da72a45005ac6a4a35e43b9f10b6aea82 杜建树 <3008993280@qq.com> 1656295144 +0800	commit: New:check endstop before homing Z axis
+bc6c016da72a45005ac6a4a35e43b9f10b6aea82 25d89038ddc01ef9dda400ba365524f3bc2324b8 杜建树 <3008993280@qq.com> 1656295406 +0800	commit: Fix:R4 stop print move error & stop botton Repeat touch
+25d89038ddc01ef9dda400ba365524f3bc2324b8 224c170e6d051b61de6386c1b4c9474e011724de 杜建树 <3008993280@qq.com> 1656385551 +0800	commit: Opt:optimize the powerloss recovery
+224c170e6d051b61de6386c1b4c9474e011724de 8270bb5960ec2c120dd3522dc3079dfe7b7c08f1 杜建树 <3008993280@qq.com> 1657174484 +0800	commit: Study:changed to D2-ST & MULTI EXTRUDER-1
+8270bb5960ec2c120dd3522dc3079dfe7b7c08f1 98fbe301f34397d90db3eb006353f631e5938f5a 杜建树 <3008993280@qq.com> 1657625689 +0800	commit: Study:MULTI EXTRUDER-2
+98fbe301f34397d90db3eb006353f631e5938f5a e3b5c7fda1394838a6b966c50103c48292ae73cc 杜建树 <3008993280@qq.com> 1659597401 +0800	commit: Test:add ws2812_led, but don't enabled
+e3b5c7fda1394838a6b966c50103c48292ae73cc 159d48b7c656b63fd714ffebce29f02203e14541 杜建树 <3008993280@qq.com> 1660008582 +0800	commit: Try:add base64 and lodepng library
+159d48b7c656b63fd714ffebce29f02203e14541 ee38f3ebd15b314473e66fc74035c1b86f444c66 杜建树 <3008993280@qq.com> 1666839764 +0800	commit: New:point-by-point set leveing replace the LevelingOffset
+ee38f3ebd15b314473e66fc74035c1b86f444c66 9ac10befd140a3e1d49bbd5c40a5cbe188b5e4fe 杜建树 <3008993280@qq.com> 1666840125 +0800	commit: Opt:extend the step timing & updata version(1.6.6.7)
+9ac10befd140a3e1d49bbd5c40a5cbe188b5e4fe 1d45f757aca5722eaf530a342458b4511598c487 杜建树 <3008993280@qq.com> 1666840461 +0800	commit: Fix:close mostor drive the short protection & updata ver 1.6.6.8
+1d45f757aca5722eaf530a342458b4511598c487 53ab83ebeeb8f07737ac394b48fd99054d003560 杜建树 <3008993280@qq.com> 1666840819 +0800	commit: Opt:use st_usb_lib to gd board & optimize usb recognition time & updata ver 1.6.6.9
+53ab83ebeeb8f07737ac394b48fd99054d003560 6933af8c69200c61be5d24561d8abd9fc2019d8b 杜建树 <3008993280@qq.com> 1666840893 +0800	commit: try:add the thumbnail - 1
+6933af8c69200c61be5d24561d8abd9fc2019d8b b7dd483bb72847ce34c9fbfe71818fe77fc002b6 杜建树 <3008993280@qq.com> 1668588212 +0800	commit (cherry-pick): Fix:use new usb_lib & add standby_mode
+b7dd483bb72847ce34c9fbfe71818fe77fc002b6 65fcf8a55bb905f550dd1cc82b16174b52ea6599 杜建树 <3008993280@qq.com> 1669348276 +0800	commit: Try:optimize udisk code(unresolved issues with RRaA)
+65fcf8a55bb905f550dd1cc82b16174b52ea6599 b7dd483bb72847ce34c9fbfe71818fe77fc002b6 杜建树 <3008993280@qq.com> 1669348396 +0800	reset: moving to HEAD^
+b7dd483bb72847ce34c9fbfe71818fe77fc002b6 6933af8c69200c61be5d24561d8abd9fc2019d8b 杜建树 <3008993280@qq.com> 1669348401 +0800	reset: moving to HEAD^
+6933af8c69200c61be5d24561d8abd9fc2019d8b 65fcf8a55bb905f550dd1cc82b16174b52ea6599 杜建树 <3008993280@qq.com> 1669361664 +0800	reset: moving to 65fcf8a

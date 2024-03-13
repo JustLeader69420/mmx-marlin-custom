@@ -1,0 +1,31 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "D2_pro"]
+	url = git@gitee.com:shenzhen-yangmingda/bcdzpc000007.git
+	fetch = +refs/heads/*:refs/remotes/D2_pro/*
+[branch "feature"]
+	remote = D2_pro
+	merge = refs/heads/feature
+[branch "develop"]
+	remote = D2_pro
+	merge = refs/heads/develop
+[branch "release"]
+	remote = D2_pro
+	merge = refs/heads/release
+[branch "usb"]
+	remote = D2_pro
+	merge = refs/heads/usb
+[remote "Marlin_langgo"]
+	url = https://gitee.com/langgoc/Marlin.git
+	fetch = +refs/heads/*:refs/remotes/Marlin_langgo/*
+[branch "udisk"]
+	remote = D2_pro
+	merge = refs/heads/udisk
+[remote "zhenqi_magician"]
+	url = https://gitee.com/curiosities/magician.git
+	fetch = +refs/heads/*:refs/remotes/zhenqi_magician/*
