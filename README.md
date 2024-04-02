@@ -1,3 +1,62 @@
+# Modified Mingda Magician X firmware :)
+
+These are my edits of the MMX firmware, enjoy.
+
+## Support:
+ - If you'd like to get help, suggest changes, or just generally discuss these modifications, you can join my Discord server here: https://discord.gg/e9fndmGUsY :)
+
+## Edits:
+ - Icons in print menu centered (moved one icon to the right)
+ - PID_FUNCTIONAL_RANGE increased, as I had overshoot problems with the alloy hotend.
+ - \+ there might be a few more, I try to add changes to the list when I make them
+ 
+## Notes:
+ - The firmware is by default set for the alloy hotend
+    - To change the nozzle temperature limit back from 315 to 275°C, comment out line 41 in Marlin/Configuration.h
+    ```
+#define USE_TI_CHOKE        // 加入钛合金喉管
+    ```
+    - Alternatively, to change the temperature limit, checkout lines 545 to 549 in Marlin/Configuration.h:
+    ```
+#ifdef USE_TI_CHOKE
+#define HEATER_0_MAXTEMP 315
+#else
+#define HEATER_0_MAXTEMP 275
+#endif
+    ```
+ - The firmwares in the ![releases](https://git.justleader.eu/justleader/mmx-marlin-custom/releases/) page have tags:
+    - xx-yy where xx is the GD or ST version and yy is either ti for alloy hotend, or nm for normal
+    - the tag can also be "multiple", if there are multiple types, in these cases, the files won't be named firmware.bin, but by their versions, as with the tags (xx-yy.bin), these must be renamed to firmware.bin before updating, or the printer will not acknowledge them.
+ 
+## Installation:
+ - Build the source, or download a build from the ![releases](https://git.justleader.eu/justleader/mmx-marlin-custom/releases/) page
+ - If the .bin file isn't named firmware.bin already, rename it
+ - Put the .bin file in the lowest folder of your portable storage
+ - Put the storage into the printer and turn the printer on
+ - Wait for the printer to update, you don't have to delete the firmware afterwards, as it gets renamed, but you can still delete the file after the update.
+ - Done! You can now go check out some ![themes](https://git.jldr.eu/justleader/mmx-marlin-themes) too :)
+
+## Building
+ - build the same as a normal Marlin firmware, I use vscode with the PlatformIO extension, from where you can build the project using the "PlatformIO: Build" button in the bottom buttons list
+ - to change the firmware type (GD or ST), comment the unsuitable type in platformio.ini, line 21 and 22, for example to enable GD:
+ ```
+ default_envs = langgo407ve_gd
+; default_envs = langgo407ve_st
+ ```
+ 
+ 
+## Other customization
+ - Ready message: line 210 in Marlin/Configuration.h
+   ```
+     #define CUSTOM_MACHINE_NAME "MD D301 F4"
+   ```
+- Changing version:
+  - Version information is changed in Marlin/src/inc/Version.h
+
+
+
+# Original README.md
+
 # Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
