@@ -9,9 +9,17 @@ These are my edits of the MMX firmware, enjoy.
  
 ## Notes:
  - The firmware is by default set for the alloy hotend
-    - To change the nozzle temperature limit back from 300 to 250°C, comment out line 41 (May change) in Marlin/Configuration.h
+    - To change the nozzle temperature limit back from 315 to 275°C, comment out line 41 in Marlin/Configuration.h
     ```
-    #define USE_TI_CHOKE        // 加入钛合金喉管
+#define USE_TI_CHOKE        // 加入钛合金喉管
+    ```
+    - Alternatively, to change the temperature limit, checkout lines 545 to 549 in Marlin/Configuration.h:
+    ```
+#ifdef USE_TI_CHOKE
+#define HEATER_0_MAXTEMP 315
+#else
+#define HEATER_0_MAXTEMP 275
+#endif
     ```
  - The firmwares in the ![releases](https://git.justleader.eu/justleader/mmx-marlin-custom/releases/) page have tags:
     - xx-yy where xx is the GD or ST version and yy is either ti for alloy hotend, or nm for normal
@@ -44,7 +52,7 @@ These are my edits of the MMX firmware, enjoy.
 
 
 
-# Original README
+# Original README.md
 
 # Marlin 3D Printer Firmware
 
