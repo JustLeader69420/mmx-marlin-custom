@@ -2,6 +2,9 @@
 
 These are my edits of the MMX firmware, enjoy.
 
+## Support:
+ - If you'd like to get help, suggest changes, or just generally discuss these modifications, you can join my Discord server here: https://discord.gg/e9fndmGUsY :)
+
 ## Edits:
  - Icons in print menu centered (moved one icon to the right)
  - PID_FUNCTIONAL_RANGE increased, as I had overshoot problems with the alloy hotend.
