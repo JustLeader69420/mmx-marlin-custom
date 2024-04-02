@@ -8,7 +8,8 @@ These are my edits of the MMX firmware, enjoy.
  - \+ there might be a few more, I try to add changes to the list when I make them
  
 ## Notes:
- - The firmware is by default set for the alloy hotend, to change this, comment out line 41 (May change) in Marlin/Configuration.h
+ - The firmware is by default set for the alloy hotend
+    - To change the nozzle temperature limit back from 300 to 250°C, comment out line 41 (May change) in Marlin/Configuration.h
     ```
     #define USE_TI_CHOKE        // 加入钛合金喉管
     ```
