@@ -33,6 +33,7 @@ These are my edits of the MMX firmware, enjoy.
  - The firmwares in the ![releases](https://git.justleader.eu/justleader/mmx-marlin-custom/releases/) page have tags:
     - xx-yy where xx is the GD or ST version and yy is either ti for alloy hotend, or nm for normal
     - the tag can also be "multiple", if there are multiple types, in these cases, the files won't be named firmware.bin, but by their versions, as with the tags (xx-yy.bin), these must be renamed to firmware.bin before updating, or the printer will not acknowledge them.
+ - The files for the GUI of the TFT screen are located at Marlin/src/lcd/extui/lib/tsc/Menu
  
 ## Installation:
  - Build the source, or download a build from the ![releases](https://git.justleader.eu/justleader/mmx-marlin-custom/releases/) page
