@@ -5,7 +5,7 @@ These are my edits of the MMX firmware, enjoy.
 ## Support:
  - If you'd like to get help, suggest changes, or just generally discuss these modifications, you can join my Discord server here: https://discord.gg/e9fndmGUsY :)
 
-## Edits:
+## Edits and fixes:
  - Icons in print menu centered (moved one icon to the right)
  - PID_FUNCTIONAL_RANGE increased, as I had overshoot problems with the alloy hotend.
  - Languages added (Uncommented and fixed up) - cz, sk, cz2 (Czech, but more professional/literal/better translations, cz is kinda fun compared to this one)
@@ -60,7 +60,10 @@ These are my edits of the MMX firmware, enjoy.
 - Changing version:
   - Version information is changed in Marlin/src/inc/Version.h
 
-
+## TODO
+ - Try to fix weird font when Czech language
+ - Move printer status to top of default screen, instead of just showing ready message up there, freeing up two button spaces.
+   - Make optional when building manually
 
 # Original README.md
 
