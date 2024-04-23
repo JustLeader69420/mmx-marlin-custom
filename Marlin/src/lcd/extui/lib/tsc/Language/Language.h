@@ -22,6 +22,10 @@ enum
   // TFT_KOREAN,       //韩语
   TFT_TURKEY,       //土耳其语
 
+
+// Add languages here, the order in which the languages are here also applies to the selection menu.
+// These are defined in Language.cpp at the bottom
+
   LANGUAGE_NUM,
 };
 

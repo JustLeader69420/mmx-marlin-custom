@@ -2664,6 +2664,9 @@ uint8_t *textSelect(uint8_t sel)
     // case TFT_KOREAN:     return (uint8_t *)kr_pack[sel];
     case TFT_TURKEY:      return (uint8_t *)tu_pack[sel];
 
+// After adding a language here, you have to create the pack in this file, copy a language, then change the language code in all the variables (ex. EN_ERROR -> CZ_ERROR) as well as in the pack name (en_pack -> cz_pack)
+
+
     default:        return (uint8_t *)en_pack[sel];
   }
 }
