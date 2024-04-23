@@ -22,13 +22,13 @@ These are my edits of the MMX firmware, enjoy.
     ```
     #define USE_TI_CHOKE        // 加入钛合金喉管
     ```
-    - Alternatively, to change the temperature limit, checkout lines 545 to 549 in Marlin/Configuration.h:
+    - Alternatively, to change the temperature limit, check lines 545 to 549 in Marlin/Configuration.h out:
     ```
-#ifdef USE_TI_CHOKE
-#define HEATER_0_MAXTEMP 315
-#else
-#define HEATER_0_MAXTEMP 275
-#endif
+    #ifdef USE_TI_CHOKE
+    #define HEATER_0_MAXTEMP 315
+    #else
+    #define HEATER_0_MAXTEMP 275
+    #endif
     ```
  - The firmwares in the ![releases](https://git.justleader.eu/justleader/mmx-marlin-custom/releases/) page have tags:
     - xx-yy where xx is the GD or ST version and yy is either ti for alloy hotend, or nm for normal
