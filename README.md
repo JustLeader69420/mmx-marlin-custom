@@ -8,6 +8,12 @@ These are my edits of the MMX firmware, enjoy.
 ## Edits:
  - Icons in print menu centered (moved one icon to the right)
  - PID_FUNCTIONAL_RANGE increased, as I had overshoot problems with the alloy hotend.
+ - Languages added (Uncommented and fixed up) - cz, sk, cz2 (Czech, but more professional/literal/better translations, cz is kinda fun compared to this one)
+   - changes in Marlin/src/lcd/extui/lib/tsc/Language/ to add a language
+      - Language has to be included in Language.cpp
+         - Check line 2648, which links to the language pack, which you create in Language.cpp too, copy a pack and change the language code before all the variables, vscode has got you covered, you can select all the variables and in the Ctrl+F find menu, you can tell it to replace within selection.
+         - You then need to create the language file, it should be in the Language folder with all the other ones, and included in Language.cpp at the top.
+      - You have to add it to the menu, see file Language.h from line 6, this enum list also determines the order the languages are cycled in the language settings button.
  - \+ there might be a few more, I try to add changes to the list when I make them
  
 ## Notes:
