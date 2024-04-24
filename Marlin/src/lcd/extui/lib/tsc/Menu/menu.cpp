@@ -339,10 +339,10 @@ void loopVolumeReminderClear(void)
 void menuDrawTitle(const uint8_t *content)
 {
   uint16_t start_y = (TITLE_END_Y - 10 - BYTE_HEIGHT) / 2;
-  GUI_FillRectColor(10, (TITLE_END_Y - 10 - BYTE_HEIGHT) / 2, LCD_WIDTH_PIXEL-10, start_y+BYTE_HEIGHT, TITLE_COLOR);
+  GUI_FillRectColor(10, (TITLE_END_Y - 10 - BYTE_HEIGHT) / 2, LCD_WIDTH_PIXEL-10, start_y+BYTE_HEIGHT, TITLE_COLOR);     // Likely clearing space
   
-  if (content)
-  {
+  if (content) //If there is text in the content variable
+  { // We draw the title
     GUI_SetTextMode(GUI_TEXTMODE_TRANS);
     GUI_DispLenString(10, start_y, content, LCD_WIDTH_PIXEL-20);
     GUI_SetTextMode(GUI_TEXTMODE_NORMAL);

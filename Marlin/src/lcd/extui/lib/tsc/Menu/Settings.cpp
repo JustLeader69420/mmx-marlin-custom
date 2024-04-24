@@ -71,14 +71,16 @@ void menuInfo(void)
 {
   const char* hardware = "Board   : " BOARD_INFO_NAME ROBOT_NAME CHIP_NAME;
   const char* firmware = "Firmware: " SHORT_BUILD_VERSION MATERIALS_NAME " (" __DATE__") ";
+  const char* cfwversion = "CFW Version: " CFWVERSION;
   
   uint16_t HW_X = (LCD_WIDTH_PIXEL - GUI_StrPixelWidth((uint8_t *)hardware))/2;
   uint16_t FW_X = (LCD_WIDTH_PIXEL - GUI_StrPixelWidth((uint8_t *)firmware))/2;
   uint16_t centerY = LCD_HEIGHT_PIXEL/2;
   uint16_t startX = min(HW_X, FW_X);  
   GUI_Clear(BK_COLOR);
-  GUI_DispString(startX, centerY - BYTE_HEIGHT, (uint8_t *)hardware);
-  GUI_DispString(startX, centerY, (uint8_t *)firmware);
+  GUI_DispString(startX, centerY - 2*BYTE_HEIGHT, (uint8_t *)hardware);
+  GUI_DispString(startX, centerY - BYTE_HEIGHT, (uint8_t *)firmware);
+  GUI_DispString(startX, centerY, (uint8_t *)cfwversion);
   GUI_DispStringInRect(20, LCD_HEIGHT_PIXEL - (BYTE_HEIGHT*2), LCD_WIDTH_PIXEL-20, LCD_HEIGHT_PIXEL, textSelect(LABEL_TOUCH_TO_EXIT));
 
   TSC_ReDrawIcon = 0; // invalid icon redraw function

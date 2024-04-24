@@ -544,6 +544,12 @@ void GUI_DispString(int16_t x, int16_t y, const uint8_t *p)
   }
 }
 
+/// @brief Truncates the provided string and displays it
+/// @param x X location on the display
+/// @param y Y location on the display
+/// @param p The string
+/// @param pixelWidth The maximum width in pixels that the string should occupy
+/// @return The rest of the string that wasn't displayed
 const uint8_t* GUI_DispLenString(int16_t x, int16_t y, const uint8_t *p, uint16_t pixelWidth)
 {       
   CHAR_INFO info;

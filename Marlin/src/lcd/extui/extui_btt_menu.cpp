@@ -59,23 +59,36 @@ namespace ExtUI {
     sprintf_P(context, "%s %s %s: %s", GET_TEXT(MSG_HALTED), GET_TEXT(MSG_PLEASE_RESET), error, component);
     popupDrawPage(NULL, textSelect(LABEL_ERROR), (uint8_t *)context, NULL, NULL);
   }
+  
   void onMediaInserted() {
+    #ifdef USEOLDSTATUSSCREEN
     volumeReminderMessage(LABEL_TFTSD_INSERTED, STATUS_NORMAL);
+    #endif
   }
   void onMediaError() {
+    #ifdef USEOLDSTATUSSCREEN
     volumeReminderMessage(LABEL_READ_TFTSD_ERROR, STATUS_NORMAL);
+    #endif
   }
   void onMediaRemoved() {
+    #ifdef USEOLDSTATUSSCREEN
     volumeReminderMessage(LABEL_TFTSD_REMOVED, STATUS_NORMAL);
+    #endif
   }
   void onUsbInserted() {
+    #ifdef USEOLDSTATUSSCREEN
     volumeReminderMessage(LABEL_U_DISK_INSERTED, STATUS_NORMAL);
+    #endif
   }
   void onUsbError() {
+    #ifdef USEOLDSTATUSSCREEN
     volumeReminderMessage(LABEL_READ_U_DISK_ERROR, STATUS_NORMAL);
+    #endif
   }
   void onUsbRemoved() {
+    #ifdef USEOLDSTATUSSCREEN
     volumeReminderMessage(LABEL_U_DISK_REMOVED, STATUS_NORMAL);
+    #endif
   }
 
   void onPlayTone(const uint16_t frequency, const uint16_t duration) {

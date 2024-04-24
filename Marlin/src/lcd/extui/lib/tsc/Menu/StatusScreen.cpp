@@ -2,7 +2,51 @@
 #include "../../../../../feature/bedlevel/bedlevel.h"
 #include "../../../../../feature/bedlevel/abl/abl.h"
 #include "../Menu/menu.h"
+//#include "../GUI.cpp"    bad
 //1 title, ITEM_PER_PAGE items (icon + label) 
+
+
+
+
+
+/// @brief Draw a custom string instead of a string from the language files. Truncates the provided string and displays it
+/// @param x X location on the display
+/// @param y Y location on the display
+/// @param p The string
+/// @param pixelWidth The maximum width in pixels that the string should occupy
+/// @return The rest of the string that wasn't displayed
+const uint8_t* GUI_DispLenStringCustom(int16_t x, int16_t y, const char *text, uint16_t pixelWidth)
+{       
+    CHAR_INFO hinfo;
+    uint16_t hcurPixelWidth = 0;
+    size_t htextLength = strlen(text);
+    
+    // Allocate a buffer with uint8_t alignment
+    uint8_t textBuffer[htextLength + 1]; // Add 1 for null terminator
+    memcpy(textBuffer, text, htextLength + 1); // Copy the string along with the null terminator
+
+    const uint8_t *p = textBuffer; // Use the aligned buffer as the pointer
+
+    if(text == NULL) return NULL;
+    
+    while(hcurPixelWidth < pixelWidth && *p)
+    {
+        getCharacterInfo(p, &hinfo);
+        if(hcurPixelWidth + hinfo.pixelWidth > pixelWidth) return p;
+        GUI_DispOne(x, y, p);
+        x += hinfo.pixelWidth;
+        hcurPixelWidth += hinfo.pixelWidth;
+        p += hinfo.bytes;
+    }
+    return p;
+}
+
+
+
+
+
+
+//#ifdef USEOLDSTATUSSCREEN
 MENUITEMS StatusItems = {
 // title
 LABEL_READY,
@@ -22,6 +66,29 @@ LABEL_READY,
   {ICON_BACKGROUND,           LABEL_BACKGROUND}, //Reserved for gantry position to be added later
   {ICON_PRINT,                LABEL_PRINT},}
 };
+/*
+MENUITEMS StatusItems = {
+// title
+LABEL_BACKGROUND, //was LABEL_READY
+// icon                       label
+ {{ICON_HEAT,                 LABEL_PREHEAT},
+  {ICON_STATUSNOZZLE,         LABEL_NOZZLE},
+  {ICON_STATUSBED,            LABEL_BED},
+  // {ICON_STATUSFAN,            LABEL_BACKGROUND},
+  // {ICON_STATUS_SPEED,         LABEL_BACKGROUND},
+  #ifdef AUTO_BED_LEVELING_BILINEAR
+    {ICON_LEVELING,             LABEL_LEVELING},
+  #else
+    {ICON_BACKGROUND,           LABEL_BACKGROUND},
+  #endif
+  {ICON_MAINMENU,             LABEL_MAINMENU},  
+  {ICON_BACKGROUND,           LABEL_BACKGROUND}, //Reserved for gantry position to be added later
+  {ICON_BACKGROUND,           LABEL_BACKGROUND}, //Reserved for gantry position to be added later
+  {ICON_PRINT,                LABEL_PRINT},}
+};
+*/
+
+
 
 const ITEM ToolItems[3] = {
 // icon                       label
@@ -170,11 +237,11 @@ static void drawStatus(void)
   GUI_SetBkColor(WHITE);
 
   GUI_ClearPrect(&rectB[1]);
-  GUI_DispString(TOOL_VAL_SEPARATOR_X, STATUS_START_Y, (uint8_t *)"/"); // Ext value
+  GUI_DispString(TOOL_VAL_SEPARATOR_X, STATUS_START_Y, (uint8_t *)"/"); // Ext value     // I assume this displays the separators on the temperature values
   redrawToolAct();
   redrawToolTag();
   GUI_ClearPrect(&rectB[2]);
-  GUI_DispString(BED_VAL_SEPARATOR_X, STATUS_START_Y, (uint8_t *)"/"); // Bed value
+  GUI_DispString(BED_VAL_SEPARATOR_X, STATUS_START_Y, (uint8_t *)"/"); // Bed value     // I assume this displays the separators on the temperature values
   redrawBedAct();
   redrawBedTag();
   // GUI_ClearPrect(&rectB[2]);
@@ -245,6 +312,7 @@ void statusScreen_setMsg(const uint8_t *title, const uint8_t *msg)
 
 void redrawStatusMsg(void)
 {
+  #ifdef USEOLDSTATUSSCREEN
   GUI_SetBkColor(INFOMSG_BKCOLOR);
   GUI_ClearPrect(&msgRect); 
 
@@ -258,10 +326,36 @@ void redrawStatusMsg(void)
 
   Scroll_CreatePara(&msgScroll, (uint8_t *)msgbody, &msgRect);
   GUI_SetBkColor(BK_COLOR);
+#else
+// Call the function to display the text
+uint16_t start_y = (TITLE_END_Y - 10 - BYTE_HEIGHT) / 2;
+GUI_FillRectColor(10, (TITLE_END_Y - 10 - BYTE_HEIGHT) / 2, LCD_WIDTH_PIXEL-10, start_y+BYTE_HEIGHT, TITLE_COLOR);     // Likely clearing space
+GUI_SetTextMode(GUI_TEXTMODE_TRANS);
+
+
+char* part1 = (char *)textSelect(LABEL_READY); 
+char* part2 = " | ";
+char* part3 = (char *)textSelect(LABEL_SCREEN_INFO);
+char* part4 = ": ";
+char* part5 = (char *)msgbody;
+
+char result[strlen(part1) + strlen(part2) + strlen(part3) + strlen(part4) + strlen(part5) + 1];
+strcpy(result, part1);    // Copy part1 into result
+strcat(result, part2);    // Concatenate part2 to result
+strcat(result, part3);    // Concatenate part3 to result
+strcat(result, part4);    // Concatenate part4 to result
+strcat(result, part5);    // Concatenate part5 to result
+
+
+GUI_DispLenStringCustom(10, start_y, result, LCD_WIDTH_PIXEL-20);
+GUI_SetTextMode(GUI_TEXTMODE_NORMAL);
+#endif
+
 }
 
 void drawStatusScreenMsg(void)
 {
+  #ifdef USEOLDSTATUSSCREEN
   // GUI_SetBkColor(0x4B0D);
   // GUI_ClearPrect(&RectInfo);
   // GUI_Clear_RCRect(RectInfo.x0, RectInfo.y0, RectInfo.x1, RectInfo.y1, 20);
@@ -272,8 +366,11 @@ void drawStatusScreenMsg(void)
   GUI_SetBkColor(MD_GRAY);
   GUI_ClearRect(RectInfo.x0+20,RectInfo.y0,RectInfo.x1-20,RectInfo.y1);
   GUI_DispString(RectInfo.x0 + STATUS_MSG_TITLE_XOFFSET,RectInfo.y0 + STATUS_MSG_ICON_YOFFSET, textSelect(LABEL_STATUS_INFO));
+  #endif
   redrawStatusMsg();
 }
+
+
 
 void scrollMsg(void){
   GUI_SetBkColor(INFOMSG_BKCOLOR);
@@ -332,6 +429,7 @@ void menuCallStatus(void)
   scrollMsg();
   loopStatusCheck();  
 }
+
 
 void menuStatus()
 {

@@ -1,3 +1,12 @@
+//           Custom Firmware Settings
+
+// Uncomment to revert modifications to the main status screen
+//#define USEOLDSTATUSSCREEN
+
+
+
+
+
 /**
  * Marlin 3D Printer Firmware
  * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
