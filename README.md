@@ -59,6 +59,8 @@ These are my edits of the MMX firmware, enjoy.
    ```
 - Changing version:
   - Version information is changed in Marlin/src/inc/Version.h
+- Reverting to old main status screen
+  - Uncomment `#define USEOLDSTATUSSCREEN` at the top in Marlin/Configuration.h, custom settings are at the top, before the Marlin configuration
 
 ## TODO
  - Try to fix weird font when Czech language
