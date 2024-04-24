@@ -14,6 +14,7 @@ These are my edits of the MMX firmware, enjoy.
          - Check line 2648, which links to the language pack, which you create in Language.cpp too, copy a pack and change the language code before all the variables, vscode has got you covered, you can select all the variables and in the Ctrl+F find menu, you can tell it to replace within selection.
          - You then need to create the language file, it should be in the Language folder with all the other ones, and included in Language.cpp at the top.
       - You have to add it to the menu, see file Language.h from line 6, this enum list also determines the order the languages are cycled in the language settings button.
+    - Status information moved to top of screen next to ready message to free up 2 icon spaces (toggleable, see Marlin/Configuration.h)
  - \+ there might be a few more, I try to add changes to the list when I make them
  
 ## Notes:
@@ -64,12 +65,15 @@ These are my edits of the MMX firmware, enjoy.
 
 ## TODO
  - Try to fix weird font when Czech language
- - Move printer status to top of default screen, instead of just showing ready message up there, freeing up two button spaces.
-   - Make optional when building manually
+ - ~Move printer status to top of default screen, instead of just showing ready message up there, freeing up two button spaces.~
+   - ~Make optional when building manually~
  - Add status message to in-print menu
  - When on info screen for a bit, Settings title appears, remove?
- - Screen dimming button on main page?
+   - Meh, doesn't really matter
+ - Screen dimming (probably only off/on) button on main page?
  - Add option to select type of leveling? (automatic bilinear/manual)
+   - Probably only if the manual leveling menu already exists, I believe if does, but still
+   - This might actually be the leveling menu in settings, gonna see
 
 # Original README.md
 
