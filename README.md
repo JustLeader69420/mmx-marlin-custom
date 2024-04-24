@@ -68,6 +68,7 @@ These are my edits of the MMX firmware, enjoy.
    - Make optional when building manually
  - Add status message to in-print menu
  - When on info screen for a bit, Settings title appears, remove?
+ - Screen dimming button on main page?
 
 # Original README.md
 
