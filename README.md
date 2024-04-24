@@ -67,6 +67,7 @@ These are my edits of the MMX firmware, enjoy.
  - Move printer status to top of default screen, instead of just showing ready message up there, freeing up two button spaces.
    - Make optional when building manually
  - Add status message to in-print menu
+ - When on info screen for a bit, Settings title appears, remove?
 
 # Original README.md
 
