@@ -69,6 +69,7 @@ These are my edits of the MMX firmware, enjoy.
  - Add status message to in-print menu
  - When on info screen for a bit, Settings title appears, remove?
  - Screen dimming button on main page?
+ - Add option to select type of leveling? (automatic bilinear/manual)
 
 # Original README.md
 
