@@ -72,6 +72,8 @@ These are my edits of the MMX firmware, enjoy.
  - When on info screen for a bit, Settings title appears, remove?
    - Meh, doesn't really matter
  - Screen dimming (probably only off/on) button on main page?
+   - Screen auto off timer?
+     - probably located in Menu/Settings
  - Add option to select type of leveling? (automatic bilinear/manual)
    - Probably only if the manual leveling menu already exists, I believe if does, but still
    - This might actually be the leveling menu in settings, gonna see
