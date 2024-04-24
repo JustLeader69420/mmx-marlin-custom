@@ -7,7 +7,7 @@ These are my edits of the MMX firmware, enjoy.
 
 ## Edits and fixes:
  - Icons in print menu centered (moved one icon to the right)
- - PID_FUNCTIONAL_RANGE increased, as I had overshoot problems with the alloy hotend.
+ - PID_FUNCTIONAL_RANGE increased, as I had overshoot problems with the alloy hotend. (Eh, it still overshoots, but I don't really care anymore lol)
  - Languages added (Uncommented and fixed up) - cz, sk, cz2 (Czech, but more professional/literal/better translations, cz is kinda fun compared to this one)
    - changes in Marlin/src/lcd/extui/lib/tsc/Language/ to add a language
       - Language has to be included in Language.cpp
@@ -77,6 +77,8 @@ These are my edits of the MMX firmware, enjoy.
  - Add option to select type of leveling? (automatic bilinear/manual)
    - Probably only if the manual leveling menu already exists, I believe if does, but still
    - This might actually be the leveling menu in settings, gonna see
+ - Make more modifications undoable?
+  - Centering print menu icons
 
 # Original README.md
 
