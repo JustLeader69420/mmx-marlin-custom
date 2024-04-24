@@ -15,6 +15,7 @@ These are my edits of the MMX firmware, enjoy.
          - You then need to create the language file, it should be in the Language folder with all the other ones, and included in Language.cpp at the top.
       - You have to add it to the menu, see file Language.h from line 6, this enum list also determines the order the languages are cycled in the language settings button.
     - Status information moved to top of screen next to ready message to free up 2 icon spaces (toggleable, see Marlin/Configuration.h)
+    - Added CFW version to info menu
  - \+ there might be a few more, I try to add changes to the list when I make them
  
 ## Notes:
