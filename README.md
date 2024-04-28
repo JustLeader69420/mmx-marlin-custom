@@ -78,7 +78,10 @@ These are my edits of the MMX firmware, enjoy.
    - Probably only if the manual leveling menu already exists, I believe if does, but still
    - This might actually be the leveling menu in settings, gonna see
  - Make more modifications undoable?
-  - Centering print menu icons
+   - Centering print menu icons
+ - Add button to resume print after M600 pause when not printing from inserted media (ex. OctoPrint/USB)
+   - Make menu for buttons like this one, probably on main screen where the space is free
+    - When using old main status screen, place in Menu>Settings
 
 
 # Original README.md
