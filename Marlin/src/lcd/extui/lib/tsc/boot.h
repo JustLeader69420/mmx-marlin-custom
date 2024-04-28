@@ -11,10 +11,16 @@
 #define LOGO_ADDR               0x0   //0xC6000
 // #define ICON_ADDR(num)          ((num)*0x5000+0x4B000)
 //预留18张150*150的logo图片位置（每张占0xb000）
+// Reserve 18 150*150 logo images (each takes up 0xb000)
+
 #define ICON_ADDR(num)          ((num)*0x5000+0xC6000)
 // 预留88张95*95的图标位置（每张占0x5000）
+// Reserve 88 95*95 icons (each takes up 0x5000)
+
 #define WORD_UNICODE            0x280000 // unicode (+0x480000 4.5M)
 // 预留0x480000位置给字体文件，大约4.6M
+// Reserve 0x480000 space for font files, about 4.6M
+
 #define BYTE_ASCII_ADDR         0x700000 // ascii (+0x1000=4K=4096)
 //#define BYTE_RESERVE_ADDR      0x710000
 
@@ -221,8 +227,10 @@ enum{
   ICON_UDISK,
   ICON_UNLOAD,
   ICON_UP,
+  ICON_TSCADJUST,
 
   // 未加载图片
+  // The image is not loaded
   ICON_POWER_SUPPLY,
   ICON_RGB_RED,
   ICON_RGB_GREEN,

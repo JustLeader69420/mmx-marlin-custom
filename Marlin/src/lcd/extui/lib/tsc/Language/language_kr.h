@@ -159,5 +159,8 @@
     #define KR_EEPROM_SAVE_SUCCESS  "EEPROM 파 라 메 터 저장 성공"
     #define KR_EEPROM_SAVE_FAILED   "EEPROM 파 라 메 터 저장 실패"
     #define KR_ELAPSED_TIME         "경과 시간"
+    #define KR_SAVE_POPUP           "Save Settings"
+    #define KR_SYCHRONZIED_VALUE    "This value is combined with the z-offset"
+    #define KR_FUNCTIONS            "Functions"
 
 #endif  

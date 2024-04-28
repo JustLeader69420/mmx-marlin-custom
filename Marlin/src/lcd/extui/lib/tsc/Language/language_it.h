@@ -152,5 +152,6 @@
     #define IT_ELAPSED_TIME         "Tempo trascorso"
     #define IT_SAVE_POPUP           "Salva le impostazioni"
     #define IT_SYCHRONZIED_VALUE    "Questo valore è combinato con compensa"
+    #define IT_FUNCTIONS            "Functions"
     
 #endif

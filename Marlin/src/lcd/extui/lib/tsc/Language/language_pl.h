@@ -150,5 +150,8 @@
     #define PL_EEPROM_SAVE_SUCCESS  "EEPROM parameters saved successfully"
     #define PL_EEPROM_SAVE_FAILED   "EEPROM parameters saved failed"
     #define PL_ELAPSED_TIME         "Czas, który upłynął"
+    #define PL_SAVE_POPUP           "Save Settings"
+    #define PL_SYCHRONZIED_VALUE    "This value is combined with the z-offset"
+    #define PL_FUNCTIONS            "Functions"
 
 #endif

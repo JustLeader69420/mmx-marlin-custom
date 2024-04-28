@@ -150,5 +150,8 @@
     #define PT_EEPROM_SAVE_SUCCESS  "EEPROM parameters saved successfully"
     #define PT_EEPROM_SAVE_FAILED   "EEPROM parameters saved failed"
     #define PT_ELAPSED_TIME         "Tempo decorrido"
+    #define PT_SAVE_POPUP           "Save Settings"
+    #define PT_SYCHRONZIED_VALUE    "This value is combined with the z-offset"
+    #define PT_FUNCTIONS            "Functions"
     
 #endif

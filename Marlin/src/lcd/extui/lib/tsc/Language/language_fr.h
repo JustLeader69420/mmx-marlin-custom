@@ -153,5 +153,6 @@
     #define FR_ELAPSED_TIME         "temps écoulé"
     #define FR_SAVE_POPUP           "réglage enregistrer"
     #define FR_SYCHRONZIED_VALUE    "Cette valeur est combinée avec le décalage en Z"
+    #define FR_FUNCTIONS            "Functions"
 
 #endif

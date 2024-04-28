@@ -152,5 +152,6 @@
     #define ES_ELAPSED_TIME         "Tiempo transcurrido"
     #define ES_SAVE_POPUP           "Guardar ajustes"
     #define ES_SYCHRONZIED_VALUE    "Este valor se combina con el Compensar z"
+    #define ES_FUNCTIONS            "Functions"
 
 #endif

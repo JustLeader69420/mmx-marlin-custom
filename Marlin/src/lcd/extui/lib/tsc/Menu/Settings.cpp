@@ -119,7 +119,11 @@ LABEL_SETTINGS,
   #else
     {ICON_PROBE_OFFSET,         LABEL_PROBE_OFFSET},
     // {ICON_BACKGROUND,           LABEL_BACKGROUND},
+    #ifdef USEOLDSTATUSSCREEN
+    {ICON_MORE,           LABEL_FUNCTIONS},
+    #else
     {ICON_BACKGROUND,           LABEL_BACKGROUND},
+    #endif
   #endif
   {ICON_BACKGROUND,           LABEL_BACKGROUND},
   {ICON_BACK,                 LABEL_BACK},}
@@ -191,6 +195,12 @@ void menuCallBackSettings(void)
       setLO_flag(true);
       infoMenu.menu[++infoMenu.cur] = menuSetLevelingValue;
       break;
+
+    #ifdef USEOLDSTATUSSCREEN
+    case KEY_ICON_5:
+      
+    #endif
+      
 
     case KEY_ICON_6:
       switch (touch_clicks)

@@ -37,7 +37,7 @@ const char iconBmpName[][16]={
  "Resume", "Runout", 
  "SD", "Settings", "Silent~1", "SilentOn", "Slow", "Start","Status~1","Status~2","Status~3","Status~4", "Stop",
  "Temp_1", "Temp_5", "Temp_10", 
- "Udisk", "Unload","Up",
+ "Udisk", "Unload","Up", "TP_Adj~1", /*TP_Adjust.bmp = 67 (iconBmpName[66])*/
 /* "Folder","File", "Rotate",  "TP_Adj~1", 
 "BackGroundColor", "FontColor", "Disconnect", "BaudRate",  "OnBoardSD", "OnTFTSD", "U_Disk",
 "Page_down", "Page_up", "Point_1", "Point_2", "Point_3", "Point_4", "Marlin", "BigTreeTech", "Gcode", "BLTouch", "BLTouc~1",

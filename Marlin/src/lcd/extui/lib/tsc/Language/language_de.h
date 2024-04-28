@@ -152,5 +152,6 @@
     #define DE_ELAPSED_TIME         "vergangene Zeit"
     #define DE_SAVE_POPUP           "Einstellung speichern"
     #define DE_SYCHRONZIED_VALUE    "Dieser Wert wird mit Z Versatz kombiniert"
+    #define DE_FUNCTIONS            "Functions"
     
 #endif

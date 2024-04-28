@@ -190,9 +190,10 @@ enum
   LABEL_SAVE_POPUP,
   LABEL_SYCHRONZIED_VALUE,
   LABEL_CHOOSE_STORAGE,
+  LABEL_FUNCTIONS, //Custom functions menu
   
-  LABEL_NUM,
-  LABEL_BACKGROUND,
+  LABEL_NUM,    //The amount of labels
+  LABEL_BACKGROUND, // I guess this returns null, so nothing gets displayed
 };
 
 uint8_t * textSelect(uint8_t sel);

@@ -151,5 +151,8 @@
     #define CZ_EEPROM_SAVE_SUCCESS  "EEPROM parameters saved successfully"
     #define CZ_EEPROM_SAVE_FAILED   "EEPROM parameters saved failed"
     #define CZ_ELAPSED_TIME         "UPLYNULÝ ČAS"
+    #define CZ_SAVE_POPUP           "Uložit nastavení" //assuming what it means, the english version is quite equivocal | předpokládám co to má znamenat, anglická verze je poněkud vícesmyslná
+    #define CZ_SYCHRONZIED_VALUE    "This value is combined with the z-offset"
+    #define CZ_FUNCTIONS            "Funkce"
 
 #endif

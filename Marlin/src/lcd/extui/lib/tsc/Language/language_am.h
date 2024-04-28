@@ -150,5 +150,8 @@
     #define AM_EEPROM_SAVE_SUCCESS  "EEPROM parameters saved successfully"
     #define AM_EEPROM_SAVE_FAILED   "EEPROM parameters saved failed"
     #define AM_ELAPSED_TIME         "ժամանակատար"
+    #define AM_SAVE_POPUP           "Setting Save"
+    #define AM_SYCHRONZIED_VALUE    "This value is combined with the z-offset"
+    #define AM_FUNCTIONS            "Functions"
     
 #endif

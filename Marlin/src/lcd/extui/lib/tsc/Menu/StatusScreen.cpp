@@ -47,7 +47,7 @@ const uint8_t* GUI_DispLenStringCustom(int16_t x, int16_t y, const char *text, u
 
 
 
-//#ifdef USEOLDSTATUSSCREEN
+#ifdef USEOLDSTATUSSCREEN
 MENUITEMS StatusItems = {
 // title
 LABEL_READY,
@@ -67,7 +67,7 @@ LABEL_READY,
   {ICON_BACKGROUND,           LABEL_BACKGROUND}, //Reserved for gantry position to be added later
   {ICON_PRINT,                LABEL_PRINT},}
 };
-/*
+#else
 MENUITEMS StatusItems = {
 // title
 LABEL_BACKGROUND, //was LABEL_READY
@@ -83,11 +83,11 @@ LABEL_BACKGROUND, //was LABEL_READY
     {ICON_BACKGROUND,           LABEL_BACKGROUND},
   #endif
   {ICON_MAINMENU,             LABEL_MAINMENU},  
-  {ICON_BACKGROUND,           LABEL_BACKGROUND}, //Reserved for gantry position to be added later
-  {ICON_BACKGROUND,           LABEL_BACKGROUND}, //Reserved for gantry position to be added later
+  {ICON_MORE,                 LABEL_FUNCTIONS}, // Custom functions menu, use more icon to not have to add more haha
+  {ICON_BACKGROUND,           LABEL_BACKGROUND},
   {ICON_PRINT,                LABEL_PRINT},}
 };
-*/
+#endif
 
 
 

@@ -63,6 +63,7 @@
 #include "Menu/PrintUdisk.h"
 #include "Menu/ChooseStorage.h"
 #include "Menu/PreheatSet.h"
+#include "Menu/Functions.h"
 #if ENABLED(NEW_BOARD)
   #include "Menu/Test_current.h"
   #include "Menu/Test_endstop.h"

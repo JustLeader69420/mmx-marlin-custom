@@ -151,5 +151,8 @@
     #define SK_EEPROM_SAVE_SUCCESS  "Parametre úspešne uložené do pamäte EEPROM."
     #define SK_EEPROM_SAVE_FAILED   "Nepodarilo sa uložiť parametre do pamäte EEPROM."
     #define SK_ELAPSED_TIME         "Uplynutý čas"
+    #define SK_SAVE_POPUP           "Uložiť nastavenie"
+    #define SK_SYCHRONZIED_VALUE    "This value is combined with the z-offset"
+    #define SK_FUNCTIONS            "Funkcie"
 
 #endif

@@ -152,5 +152,6 @@
     #define JP_ELAPSED_TIME         "経過時間"
     #define JP_SAVE_POPUP           "設定を保存する"
     #define JP_SYCHRONZIED_VALUE    "この値はzオフセットと組み合わされます"
+    #define JP_FUNCTIONS            "Functions"
     
 #endif
