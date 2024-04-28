@@ -2,7 +2,7 @@
 #include "../../../../../feature/bedlevel/bedlevel.h"
 #include "../../../../../feature/bedlevel/abl/abl.h"
 #include "../Menu/menu.h"
-//#include "../GUI.cpp"    bad, very much recursive, don't uncomment
+#include "FeatureSettings.h"
 //1 title, ITEM_PER_PAGE items (icon + label) 
 
 
@@ -408,6 +408,8 @@ void menuCallStatus(void)
     case KEY_ICON_4:
       infoMenu.menu[++infoMenu.cur] = menuMain;
       break;
+    case KEY_ICON_5:
+      infoMenu.menu[++infoMenu.cur] = menuFunctions;
     case KEY_ICON_7:
      #ifdef HAS_UDISK
       infoMenu.menu[++infoMenu.cur] = menuChooseStorage;

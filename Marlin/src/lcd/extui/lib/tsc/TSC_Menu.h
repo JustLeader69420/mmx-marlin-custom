@@ -36,10 +36,12 @@
 #include "flashStore.h"
 
 // Menu
+// NOTE: ORDER MATTERS
 #include "Menu/Popup.h"
 #include "Menu/PowerFailed.h"
 #include "Menu/UsrConfirm.h"
 #include "Menu/menu.h"
+#include "Menu/Functions.h"
 #include "Menu/StatusScreen.h"
 #include "Menu/MainPage.h"
 #include "Menu/PreheatMenu.h"
@@ -63,7 +65,6 @@
 #include "Menu/PrintUdisk.h"
 #include "Menu/ChooseStorage.h"
 #include "Menu/PreheatSet.h"
-#include "Menu/Functions.h"
 #if ENABLED(NEW_BOARD)
   #include "Menu/Test_current.h"
   #include "Menu/Test_endstop.h"

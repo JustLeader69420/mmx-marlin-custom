@@ -1,10 +1,10 @@
-#ifndef _SETTINGS_H_
-#define _SETTINGS_H_
+#ifndef _FUNCTIONS_H_
+#define _FUNCTIONS_H_
 
-#include "stdint.h"
+//#include "stdint.h"
 
-void infoSettingsReset(void);
-void loopCheckSettings(void);
-void menuSettings(void);
+void menuFunctions(void);
+
+
 
 #endif

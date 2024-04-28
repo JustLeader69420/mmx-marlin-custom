@@ -1,5 +1,6 @@
 #include "Functions.h"
 #include "../TSC_Menu.h"
+//#include "../../../../extui/ui_api.h"
 
 
 
@@ -25,20 +26,20 @@ void menuCallBackFunctions(void)
   switch(key_num)
   {
     case KEY_ICON_0: 
-      // TODO: Verify corrent print resume button function
-      ExtUI::setUserConfirmed();
-      ExtUI::resumePrint();
+      // TODO: Verify correct print resume button function
+      //ExtUI::setUserConfirmed();
+      //ExtUI::resumePrint();
       break;
     
     case KEY_ICON_2:
-      infoMenu.menu[++infoMenu.cur] = menuFeatureSettings; // Increments menu depth, displays next menu?
+      //infoMenu.menu[++infoMenu.cur] = menuFeatureSettings; // Increments menu depth, displays next menu?
       break;
 
     case KEY_ICON_1:
-      // TODO: Verify corrent touchscreen calibration button function
-      TSC_Calibration();
-      storePara();
-      LOGO_ReadDisplay();
+      // TODO: Verify correct touchscreen calibration button function
+      //TSC_Calibration();
+      //storePara();
+      //LOGO_ReadDisplay();
       break;
 
     case KEY_ICON_7:
@@ -50,7 +51,7 @@ void menuCallBackFunctions(void)
   }
 }
 
-void menuSettings(void)
+void menuFunctions(void)
 {
 
   //Some other click processing stuff goes here ig
