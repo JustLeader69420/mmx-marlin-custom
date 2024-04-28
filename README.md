@@ -83,6 +83,10 @@ These are my edits of the MMX firmware, enjoy.
    - Make menu for buttons like this one, probably on main screen where the space is free
     - When using old main status screen, place in Menu>Settings
    - Maybe add gcode to resume from terminal?
+ - Add touchscreen calibration button to Menu>Settings, because when the icon is there, might as well
+   - I guess do by finding function, or if cannot find, create reset.txt on inserted media (unlikely)
+   - Remove reset.txt file from sdcard when screen calibrated
+   - Icon actually doesn't seem to be saved to machine, add to updating function?
 
 
 # Original README.md
