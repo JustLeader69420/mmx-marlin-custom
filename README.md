@@ -82,6 +82,7 @@ These are my edits of the MMX firmware, enjoy.
  - Add button to resume print after M600 pause when not printing from inserted media (ex. OctoPrint/USB)
    - Make menu for buttons like this one, probably on main screen where the space is free
     - When using old main status screen, place in Menu>Settings
+   - Maybe add gcode to resume from terminal?
 
 
 # Original README.md
