@@ -3,7 +3,7 @@
 
 //#include "stdint.h"
 
-void menuFunctions(void);
+void menuFunctionsmenu(void);
 
 
 

@@ -201,6 +201,7 @@ const char *const en_pack[LABEL_NUM]={
   EN_SAVE_POPUP,
   EN_SYCHRONZIED_VALUE,
   EN_FUNCTIONS,
+  EN_FUNCTIONS,
 };
 
 // 中文

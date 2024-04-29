@@ -198,7 +198,7 @@ void menuCallBackSettings(void)
 
     #ifdef USEOLDSTATUSSCREEN
     case KEY_ICON_5:
-      infoMenu.menu[++infoMenu.cur] = menuFunctions;
+      infoMenu.menu[++infoMenu.cur] = menuFunctionsmenu;
       
     #endif
       

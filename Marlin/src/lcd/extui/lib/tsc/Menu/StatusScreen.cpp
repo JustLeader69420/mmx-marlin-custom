@@ -409,7 +409,7 @@ void menuCallStatus(void)
       infoMenu.menu[++infoMenu.cur] = menuMain;
       break;
     case KEY_ICON_5:
-      infoMenu.menu[++infoMenu.cur] = menuFunctions;
+      infoMenu.menu[++infoMenu.cur] = menuFunctionsmenu;
     case KEY_ICON_7:
      #ifdef HAS_UDISK
       infoMenu.menu[++infoMenu.cur] = menuChooseStorage;

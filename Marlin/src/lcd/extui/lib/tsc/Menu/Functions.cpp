@@ -1,10 +1,13 @@
 #include "Functions.h"
 #include "../TSC_Menu.h"
-//#include "../../../../extui/ui_api.h"
+//#include "../../../../extui/ui_api.h"   Doesn't seem to be needed
+#include "../Hal/touch_process.h"
+#include "../flashStore.h"
+#include "../boot.h"
 
 
 
-MENUITEMS functionsItems = {
+MENUITEMS functionsmenuItems = {
 // title
 LABEL_FUNCTIONS,
 // icon                       label
@@ -20,15 +23,16 @@ LABEL_FUNCTIONS,
 };
 
 
-void menuCallBackFunctions(void)
+void menuCallBackFunctionsmenu(void)
 {
   KEY_VALUES key_num = menuKeyGetValue();
   switch(key_num)
   {
     case KEY_ICON_0: 
       // TODO: Verify correct print resume button function
-      //ExtUI::setUserConfirmed();
-      //ExtUI::resumePrint();
+      //popupDrawPage(bottomDoubleBtn, textSelect(LABEL_POWER_FAILED), (uint8_t *)recovery.info.sd_filename, textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
+      ExtUI::setUserConfirmed();
+      ExtUI::resumePrint();
       break;
     
     case KEY_ICON_2:
@@ -37,9 +41,11 @@ void menuCallBackFunctions(void)
 
     case KEY_ICON_1:
       // TODO: Verify correct touchscreen calibration button function
-      //TSC_Calibration();
-      //storePara();
-      //LOGO_ReadDisplay();
+      //popupDrawPage(bottomDoubleBtn, textSelect(LABEL_POWER_FAILED), (uint8_t *)recovery.info.sd_filename, textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
+      TSC_Calibration();
+      storePara();
+      LOGO_ReadDisplay();
+      infoMenu.menu[++infoMenu.cur] = menuStatus;
       break;
 
     case KEY_ICON_7:
@@ -51,12 +57,10 @@ void menuCallBackFunctions(void)
   }
 }
 
-void menuFunctions(void)
+void menuFunctionsmenu(void)
 {
 
-  //Some other click processing stuff goes here ig
-
-  menuDrawPage(&functionsItems);
-  menuSetFrontCallBack(menuCallBackFunctions);
+  menuDrawPage(&functionsmenuItems);
+  menuSetFrontCallBack(menuCallBackFunctionsmenu);
 
 }
