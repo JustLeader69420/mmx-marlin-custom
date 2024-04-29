@@ -14,10 +14,16 @@ These are my edits of the MMX firmware, enjoy.
          - Check line 2648, which links to the language pack, which you create in Language.cpp too, copy a pack and change the language code before all the variables, vscode has got you covered, you can select all the variables and in the Ctrl+F find menu, you can tell it to replace within selection.
          - You then need to create the language file, it should be in the Language folder with all the other ones, and included in Language.cpp at the top.
       - You have to add it to the menu, see file Language.h from line 6, this enum list also determines the order the languages are cycled in the language settings button.
-    - Status information moved to top of screen next to ready message to free up 2 icon spaces (toggleable, see Marlin/Configuration.h)
-    - Added CFW version to info menu
- - Change long touch time in touch_process.cpp to not have to wait 3-5 business days in order to delete a file (not sure where else this might be used)
- - \+ there might be a few more, I try to add changes to the list when I make them
+ - Status information moved to top of screen next to ready message to free up 2 icon spaces (toggleable, see Marlin/Configuration.h)
+ - Added CFW version to info menu
+ - Changed long touch time in touch_process.cpp to not have to wait 3-5 business days in order to delete a file (not sure where else this delay might be used)
+ - Added custom functions menu
+   - Find under main status screen > Functions, or if using old status screen, under main status screen > Menu > Settings > Functions
+   - Added button to resume print after M600 pause when not printing from inserted media (ex. OctoPrint/USB)
+   - Added button to calibrate touchscreen without having to create the reset.txt file
+     - might be a little buggy
+       - I believe that at the moment the machine crashes and reboots when there is no action 
+ - \+ there might be a few more changes, I try to add them to the list when they are finished
  
 ## Notes:
  - The firmware is by default set for the alloy hotend
@@ -45,6 +51,7 @@ These are my edits of the MMX firmware, enjoy.
  - Put the storage into the printer and turn the printer on
  - Wait for the printer to update, you don't have to delete the firmware afterwards, as it gets renamed, but you can still delete the file after the update.
  - Done! You can now go check out some ![themes](https://git.jldr.eu/justleader/mmx-marlin-themes) too :)
+   - Consider installing an icon pack (can be the default one) when switching from the vanilla version, as there are unused icons in the vanilla version, that I use, and that don't get uploaded to the machine when updating icons with the vanilla firmware.
 
 ## Building
  - build the same as a normal Marlin firmware, I use vscode with the PlatformIO extension, from where you can build the project using the "PlatformIO: Build" button in the bottom buttons list
@@ -67,29 +74,16 @@ These are my edits of the MMX firmware, enjoy.
 
 ## TODO
  - Try to fix weird font when Czech language
- - ~~Move printer status to top of default screen, instead of just showing ready message up there, freeing up two button spaces.~~
-   - ~~Make optional when building manually~~
  - Add status message to in-print menu
- - When on info screen for a bit, Settings title appears, remove?
-   - Meh, doesn't really matter
- - Screen dimming (probably only off/on) button on main page?
-   - Screen auto off timer?
-     - probably located in Menu/Settings
- - Add option to select type of leveling? (automatic bilinear/manual)
-   - Probably only if the manual leveling menu already exists, I believe if does, but still
-   - This might actually be the leveling menu in settings, gonna see
+ - Screen auto off timer?
+   - probably located in Menu/Settings/Other settings/
+ - when USEOLDSTATUSSCREEN, put Functions menu to a new Other settings menu, where we can put more settings, maybe multiple pages, or a settings list?
  - Make more modifications undoable?
    - Centering print menu icons
- - Add button to resume print after M600 pause when not printing from inserted media (ex. OctoPrint/USB)
-   - Make menu for buttons like this one, probably on main screen where the space is free
-    - When using old main status screen, place in Menu>Settings
-   - Maybe add gcode to resume from terminal?
  - Add touchscreen calibration button to Menu>Settings, because when the icon is there, might as well
-   - I guess do by finding function, or if cannot find, create reset.txt on inserted media (unlikely)
-   - Remove reset.txt file from sdcard when screen calibrated
-   - Icon actually doesn't seem to be saved to machine, add to updating function?
    - Change a variable and reset to calibrate on boot? If you don't begin the calibration fast enough when opened through the menu, it seems the machine crashes and just reboots
  - Add reset settings button somewhere
+ - GCODE to resume from terminal?
  - Add GCODE to manipulate all the settings currently only available on the touchscreen?
  - Make the language button open a list instead of cycling?
  - Skip storage selection menu when only one storage media type inserted?
