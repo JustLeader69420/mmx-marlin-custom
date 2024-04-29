@@ -46,3 +46,5 @@
 void LCD_RefreshDirection(void);
 void LCD_Init(void);          //
 void LCD_init_Reg(void);
+void LCD_LED_Off(void);
+void LCD_LED_On(void);

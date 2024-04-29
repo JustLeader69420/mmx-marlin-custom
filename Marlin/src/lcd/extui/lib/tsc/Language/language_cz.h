@@ -153,6 +153,8 @@
     #define CZ_ELAPSED_TIME         "UPLYNULÝ ČAS"
     #define CZ_SAVE_POPUP           "Uložit nastavení" //assuming what it means, the english version is quite equivocal | předpokládám co to má znamenat, anglická verze je poněkud vícesmyslná
     #define CZ_SYCHRONZIED_VALUE    "This value is combined with the z-offset"
+    #define CZ_CHOOSE_STORAGE       "Vyberte si úložiště:"
     #define CZ_FUNCTIONS            "Funkce"
+    #define CZ_SLEEP                "Vypnout obrazovku"
 
 #endif

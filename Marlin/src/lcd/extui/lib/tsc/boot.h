@@ -228,6 +228,7 @@ enum{
   ICON_UNLOAD,
   ICON_UP,
   ICON_TSCADJUST,
+  ICON_SHUTDOWN,
 
   // 未加载图片
   // The image is not loaded

@@ -161,6 +161,8 @@
     #define KR_ELAPSED_TIME         "경과 시간"
     #define KR_SAVE_POPUP           "Save Settings"
     #define KR_SYCHRONZIED_VALUE    "This value is combined with the z-offset"
+    #define KR_CHOOSE_STORAGE       "Choose a storage device:"
     #define KR_FUNCTIONS            "Functions"
+    #define KR_SLEEP                "Turn off screen"
 
 #endif  

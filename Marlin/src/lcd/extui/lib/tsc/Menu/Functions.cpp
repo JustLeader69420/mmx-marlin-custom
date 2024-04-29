@@ -14,7 +14,7 @@ LABEL_FUNCTIONS,
  {
   {ICON_RESUME,               LABEL_RESUME},              //Resume print button
   {ICON_TSCADJUST,            LABEL_TOUCHSCREEN_ADJUST},  //Touchscreen calibration button
-  {ICON_BACKGROUND,           LABEL_BACKGROUND},
+  {ICON_SHUTDOWN,             LABEL_SLEEP},
   {ICON_BACKGROUND,           LABEL_BACKGROUND}, 
   {ICON_BACKGROUND,           LABEL_BACKGROUND}, 
   {ICON_BACKGROUND,           LABEL_BACKGROUND}, 
@@ -34,10 +34,6 @@ void menuCallBackFunctionsmenu(void)
       ExtUI::setUserConfirmed();
       ExtUI::resumePrint();
       break;
-    
-    case KEY_ICON_2:
-      //infoMenu.menu[++infoMenu.cur] = menuFeatureSettings; // Increments menu depth, displays next menu?
-      break;
 
     case KEY_ICON_1:
       // TODO: Verify correct touchscreen calibration button function
@@ -46,6 +42,14 @@ void menuCallBackFunctionsmenu(void)
       storePara();
       LOGO_ReadDisplay();
       infoMenu.menu[++infoMenu.cur] = menuStatus;
+      break;
+
+    case KEY_ICON_2:
+      //infoMenu.menu[++infoMenu.cur] = menuFeatureSettings; // Increments menu depth, displays next menu?
+      LCD_LED_Off();
+      
+      // TODO: Move to empty menu to not activate any buttons
+      //LCD_LED_On();
       break;
 
     case KEY_ICON_7:

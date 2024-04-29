@@ -152,6 +152,8 @@
     #define AM_ELAPSED_TIME         "ժամանակատար"
     #define AM_SAVE_POPUP           "Setting Save"
     #define AM_SYCHRONZIED_VALUE    "This value is combined with the z-offset"
+    #define AM_CHOOSE_STORAGE       "Choose a storage device:"
     #define AM_FUNCTIONS            "Functions"
+    #define AM_SLEEP                "Turn off screen"
     
 #endif

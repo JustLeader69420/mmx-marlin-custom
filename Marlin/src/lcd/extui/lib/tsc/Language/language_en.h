@@ -154,5 +154,6 @@
     #define EN_SYCHRONZIED_VALUE    "This value is combined with the z-offset"
     #define EN_CHOOSE_STORAGE       "Choose a storage device:"
     #define EN_FUNCTIONS            "Functions"
+    #define EN_SLEEP                "Turn off screen"
 
 #endif

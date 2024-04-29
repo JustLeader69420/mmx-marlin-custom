@@ -152,6 +152,8 @@
     #define RU_ELAPSED_TIME         "Пройденное время"
     #define RU_SAVE_POPUP           "Сохранить настройки"
     #define RU_SYCHRONZIED_VALUE    "Это значение комбинируется с z-смещением."
+    #define RU_CHOOSE_STORAGE       "Choose a storage device:"
     #define RU_FUNCTIONS            "Functions"
+    #define RU_SLEEP                "Turn off screen"
     
 #endif

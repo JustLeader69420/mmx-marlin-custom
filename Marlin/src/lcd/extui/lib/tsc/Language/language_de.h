@@ -152,6 +152,8 @@
     #define DE_ELAPSED_TIME         "vergangene Zeit"
     #define DE_SAVE_POPUP           "Einstellung speichern"
     #define DE_SYCHRONZIED_VALUE    "Dieser Wert wird mit Z Versatz kombiniert"
+    #define DE_CHOOSE_STORAGE       "Choose a storage device:"
     #define DE_FUNCTIONS            "Functions"
+    #define DE_SLEEP                "Turn off screen"
     
 #endif

@@ -152,6 +152,8 @@
     #define TU_ELAPSED_TIME         "Geçen zaman"
     #define TU_SAVE_POPUP           "ayarı kaydet"
     #define TU_SYCHRONZIED_VALUE    "Bu değer z ofset ile birleştirilir."
+    #define TU_CHOOSE_STORAGE       "Choose a storage device:"
     #define TU_FUNCTIONS            "Functions"
+    #define TU_SLEEP                "Turn off screen"
 
 #endif

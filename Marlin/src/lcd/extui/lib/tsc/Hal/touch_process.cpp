@@ -160,6 +160,8 @@ uint16_t Key_value(uint8_t total_rect,const GUI_RECT* menuRect)
   return IDLE_TOUCH;
 }
 
+static uint32_t touchcooldownFromTime = 0;
+
 uint8_t isPress(void)
 {
   // static bool pressed = false;
@@ -169,13 +171,17 @@ uint8_t isPress(void)
   bool nowPressed = !XPT2046_Read_Pen();
 
   if (nowPressed) {
-    if (nextTime <= millis()) {
-      // pressed = true;
-      if(millis() >= (nextTime+3000))
-        pressed = 3;
-      else
-        pressed = 1;
-    }
+    if (READ(LCD_BACKLIGHT_PIN)) {  // If screen is on
+      if (millis() - touchcooldownFromTime > 500) { // A sort of debounce
+        if (nextTime <= millis()) {
+          // pressed = true;
+          if(millis() >= (nextTime+3000))
+            pressed = 3;
+          else
+            pressed = 1;
+        } 
+      }
+    } else {LCD_LED_On(); touchcooldownFromTime = millis();}
   } else {
     pressed = false;
     nextTime = millis() + 10;

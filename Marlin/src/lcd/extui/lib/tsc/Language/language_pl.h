@@ -152,6 +152,8 @@
     #define PL_ELAPSED_TIME         "Czas, który upłynął"
     #define PL_SAVE_POPUP           "Save Settings"
     #define PL_SYCHRONZIED_VALUE    "This value is combined with the z-offset"
+    #define PL_CHOOSE_STORAGE       "Choose a storage device:"
     #define PL_FUNCTIONS            "Functions"
+    #define PL_SLEEP                "Turn off screen"
 
 #endif

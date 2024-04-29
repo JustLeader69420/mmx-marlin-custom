@@ -152,6 +152,8 @@
     #define PT_ELAPSED_TIME         "Tempo decorrido"
     #define PT_SAVE_POPUP           "Save Settings"
     #define PT_SYCHRONZIED_VALUE    "This value is combined with the z-offset"
+    #define PT_CHOOSE_STORAGE       "Choose a storage device:"
     #define PT_FUNCTIONS            "Functions"
+    #define PT_SLEEP                "Turn off screen"
     
 #endif

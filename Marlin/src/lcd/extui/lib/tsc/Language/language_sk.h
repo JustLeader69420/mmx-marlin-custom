@@ -153,6 +153,8 @@
     #define SK_ELAPSED_TIME         "Uplynutý čas"
     #define SK_SAVE_POPUP           "Uložiť nastavenie"
     #define SK_SYCHRONZIED_VALUE    "This value is combined with the z-offset"
+    #define SK_CHOOSE_STORAGE       "Choose a storage device:"
     #define SK_FUNCTIONS            "Funkcie"
+    #define SK_SLEEP                "Turn off screen"
 
 #endif

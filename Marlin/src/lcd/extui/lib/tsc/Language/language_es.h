@@ -152,6 +152,8 @@
     #define ES_ELAPSED_TIME         "Tiempo transcurrido"
     #define ES_SAVE_POPUP           "Guardar ajustes"
     #define ES_SYCHRONZIED_VALUE    "Este valor se combina con el Compensar z"
+    #define ES_CHOOSE_STORAGE       "Choose a storage device:"
     #define ES_FUNCTIONS            "Functions"
+    #define ES_SLEEP                "Turn off screen"
 
 #endif

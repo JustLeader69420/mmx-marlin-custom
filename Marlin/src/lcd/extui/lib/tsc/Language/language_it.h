@@ -152,6 +152,8 @@
     #define IT_ELAPSED_TIME         "Tempo trascorso"
     #define IT_SAVE_POPUP           "Salva le impostazioni"
     #define IT_SYCHRONZIED_VALUE    "Questo valore è combinato con compensa"
+    #define IT_CHOOSE_STORAGE       "Choose a storage device:"
     #define IT_FUNCTIONS            "Functions"
+    #define IT_SLEEP                "Turn off screen"
     
 #endif

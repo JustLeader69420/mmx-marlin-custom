@@ -153,6 +153,8 @@
     #define FR_ELAPSED_TIME         "temps écoulé"
     #define FR_SAVE_POPUP           "réglage enregistrer"
     #define FR_SYCHRONZIED_VALUE    "Cette valeur est combinée avec le décalage en Z"
+    #define FR_CHOOSE_STORAGE       "Choose a storage device:"
     #define FR_FUNCTIONS            "Functions"
+    #define FR_SLEEP                "Turn off screen"
 
 #endif
