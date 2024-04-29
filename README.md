@@ -74,6 +74,7 @@ These are my edits of the MMX firmware, enjoy.
 
 ## TODO
  - Try to fix weird font when Czech language
+   - Change order of fonts in utf8_decode.cpp?
  - Add status message to in-print menu
  - Screen auto off timer?
    - probably located in Menu/Settings/Other settings/
