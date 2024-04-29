@@ -16,6 +16,7 @@ These are my edits of the MMX firmware, enjoy.
       - You have to add it to the menu, see file Language.h from line 6, this enum list also determines the order the languages are cycled in the language settings button.
     - Status information moved to top of screen next to ready message to free up 2 icon spaces (toggleable, see Marlin/Configuration.h)
     - Added CFW version to info menu
+ - Change long touch time in touch_process.cpp to not have to wait 3-5 business days in order to delete a file (not sure where else this might be used)
  - \+ there might be a few more, I try to add changes to the list when I make them
  
 ## Notes:
