@@ -88,6 +88,7 @@ These are my edits of the MMX firmware, enjoy.
    - I guess do by finding function, or if cannot find, create reset.txt on inserted media (unlikely)
    - Remove reset.txt file from sdcard when screen calibrated
    - Icon actually doesn't seem to be saved to machine, add to updating function?
+   - Change a variable and reset to calibrate on boot? If you don't begin the calibration fast enough when opened through the menu, it seems the machine crashes and just reboots
  - Add reset settings button somewhere
  - Add GCODE to manipulate all the settings currently only available on the touchscreen?
 
