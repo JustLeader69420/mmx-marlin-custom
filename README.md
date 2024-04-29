@@ -92,6 +92,8 @@ These are my edits of the MMX firmware, enjoy.
  - Add reset settings button somewhere
  - Add GCODE to manipulate all the settings currently only available on the touchscreen?
  - Make the language button open a list instead of cycling?
+ - Skip storage selection menu when only one storage media type inserted?
+   - show error when no media inserted and return to main menu
 
 
 # Original README.md
