@@ -23,7 +23,7 @@ static FONT_BITMAP font[] = {
     0x20, // the first character in BYTE_ASCII_ADDR is 0x20(' ')
   },
   { // Czech(Latin 1 Supplement, Extended-A&B)
-    0x20, //Was 0x80
+    0x80,
     0x24F,
     BYTE_HEIGHT,
     BYTE_WIDTH,

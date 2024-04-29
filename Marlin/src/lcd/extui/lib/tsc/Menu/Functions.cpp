@@ -36,20 +36,20 @@ void menuCallBackFunctionsmenu(void)
       break;
 
     case KEY_ICON_1:
-      // TODO: Verify correct touchscreen calibration button function
       //popupDrawPage(bottomDoubleBtn, textSelect(LABEL_POWER_FAILED), (uint8_t *)recovery.info.sd_filename, textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
       TSC_Calibration();
       storePara();
       LOGO_ReadDisplay();
       infoMenu.menu[++infoMenu.cur] = menuStatus;
+      // TODO: Reboot instead, menu moving is weird, could exhaust the menu tree depth limit, if user calibrates screen multiple times without rebooting?
       break;
 
     case KEY_ICON_2:
       //infoMenu.menu[++infoMenu.cur] = menuFeatureSettings; // Increments menu depth, displays next menu?
       LCD_LED_Off();
-      
-      // TODO: Move to empty menu to not activate any buttons
-      //LCD_LED_On();
+      // To activate screen again, click the screen
+
+      //LCD_LED_On(); to turn screen on
       break;
 
     case KEY_ICON_7:
