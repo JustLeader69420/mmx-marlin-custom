@@ -88,6 +88,7 @@ These are my edits of the MMX firmware, enjoy.
    - Remove reset.txt file from sdcard when screen calibrated
    - Icon actually doesn't seem to be saved to machine, add to updating function?
  - Add reset settings button somewhere
+ - Add GCODE to manipulate all the settings currently only available on the touchscreen?
 
 
 # Original README.md
