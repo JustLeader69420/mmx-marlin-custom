@@ -89,6 +89,7 @@ These are my edits of the MMX firmware, enjoy.
  - Make the language button open a list instead of cycling?
  - Skip storage selection menu when only one storage media type inserted?
    - show error when no media inserted and return to main menu
+ - https://github.com/MINGDA3D/KlipperScreen style menu? 👀
 
 
 # Original README.md
