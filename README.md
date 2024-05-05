@@ -23,6 +23,7 @@ These are my edits of the MMX firmware, enjoy.
    - Added button to calibrate touchscreen without having to create the reset.txt file
      - might be a little buggy
        - I believe that at the moment the machine crashes and reboots when there is no action 
+ - Because of the menu modifications, a few icons have been enabled, which previously only existed in the TFT35 folder, but weren't used when updating icons, if you see empty icons, download a TFT35 theme folder from either Mingda, or ![my themes repository](https://git.justleader.eu/justleader/mmx-marlin-themes), then install them.
  - \+ there might be a few more changes, I try to add them to the list when they are finished
  
 ## Notes:
@@ -72,6 +73,9 @@ These are my edits of the MMX firmware, enjoy.
 - Reverting to old main status screen
   - Uncomment `#define USEOLDSTATUSSCREEN` at the top in Marlin/Configuration.h, custom settings are at the top, before the Marlin configuration
 
+## Current issues
+ - When opening Functions menu, Storage Select menu shows first, then only after clicking back, the custom menu opens
+
 ## TODO
  - Try to fix weird font when Czech language
    - Change order of fonts in utf8_decode.cpp?
@@ -84,7 +88,7 @@ These are my edits of the MMX firmware, enjoy.
  - Add touchscreen calibration button to Menu>Settings, because when the icon is there, might as well
    - Change a variable and reset to calibrate on boot? If you don't begin the calibration fast enough when opened through the menu, it seems the machine crashes and just reboots
  - Add reset settings button somewhere
- - GCODE to resume from terminal?
+ - GCODE to resume print from terminal?
  - Add GCODE to manipulate all the settings currently only available on the touchscreen?
  - Make the language button open a list instead of cycling?
  - Skip storage selection menu when only one storage media type inserted?
