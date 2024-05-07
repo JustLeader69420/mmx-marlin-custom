@@ -14,12 +14,12 @@ LABEL_FUNCTIONS,
  {
   {ICON_RESUME,               LABEL_RESUME},              //Resume print button
   {ICON_TSCADJUST,            LABEL_TOUCHSCREEN_ADJUST},  //Touchscreen calibration button
-  {ICON_SHUTDOWN,             LABEL_SLEEP},
+  {ICON_SHUTDOWN,             LABEL_SLEEP},               //Turn display off button
   {ICON_BACKGROUND,           LABEL_BACKGROUND}, 
   {ICON_BACKGROUND,           LABEL_BACKGROUND}, 
   {ICON_BACKGROUND,           LABEL_BACKGROUND}, 
   {ICON_BACKGROUND,           LABEL_BACKGROUND},
-  {ICON_BACK,                 LABEL_BACK},}
+  {ICON_BACK,                 LABEL_BACK},}               //Back button
 };
 
 
@@ -29,7 +29,6 @@ void menuCallBackFunctionsmenu(void)
   switch(key_num)
   {
     case KEY_ICON_0: 
-      // TODO: Verify correct print resume button function
       //popupDrawPage(bottomDoubleBtn, textSelect(LABEL_POWER_FAILED), (uint8_t *)recovery.info.sd_filename, textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
       ExtUI::setUserConfirmed();
       ExtUI::resumePrint();
@@ -66,5 +65,6 @@ void menuFunctionsmenu(void)
 
   menuDrawPage(&functionsmenuItems);
   menuSetFrontCallBack(menuCallBackFunctionsmenu);
+  
 
 }
