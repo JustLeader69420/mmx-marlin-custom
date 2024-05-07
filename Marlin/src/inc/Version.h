@@ -1,4 +1,4 @@
-#define CFWVERSION   "1.2-dev"
+#define CFWVERSION   "1.3-dev"
 
 
 /**
