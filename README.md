@@ -95,6 +95,7 @@ These are my edits of the MMX firmware, enjoy.
    - show error when no media inserted and return to main menu
  - https://github.com/MINGDA3D/KlipperScreen style menu? 👀
  - Look at some wifi connection options?
+ - add delay to clicks to avoid unwanted doubleclicking
 
 
 # Original README.md
