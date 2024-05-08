@@ -203,6 +203,7 @@ const char *const en_pack[LABEL_NUM]={
   EN_CHOOSE_STORAGE,
   EN_FUNCTIONS,
   EN_SLEEP,
+  EN_RESTART_TO_CONTINUE,
 };
 
 // 中文
@@ -368,6 +369,7 @@ const char *const cn_pack[LABEL_NUM]={
   CN_CHOOSE_STORAGE,
   CN_FUNCTIONS,
   CN_SLEEP,
+  CN_RESTART_TO_CONTINUE,
 };
 
 // 俄语
@@ -533,6 +535,7 @@ const char *const ru_pack[LABEL_NUM]={
   RU_CHOOSE_STORAGE,
   RU_FUNCTIONS,
   RU_SLEEP,  
+  RU_RESTART_TO_CONTINUE,
 };
 
 // 日语
@@ -698,6 +701,7 @@ const char *const jp_pack[LABEL_NUM]={
   JP_CHOOSE_STORAGE,
   JP_FUNCTIONS,
   JP_SLEEP,
+  JP_RESTART_TO_CONTINUE,
 };
 
 // 亚美尼亚语
@@ -863,6 +867,7 @@ const char *const am_pack[LABEL_NUM]={
   AM_CHOOSE_STORAGE,
   AM_FUNCTIONS,
   AM_SLEEP,
+  AM_RESTART_TO_CONTINUE,
 };
 
 // 德语
@@ -1028,6 +1033,7 @@ const char *const de_pack[LABEL_NUM]={
   DE_CHOOSE_STORAGE,
   DE_FUNCTIONS,
   DE_SLEEP,
+  DE_RESTART_TO_CONTINUE,
 };
 
 // 捷克语
@@ -1193,6 +1199,7 @@ const char *const cz_pack[LABEL_NUM]={
   CZ_CHOOSE_STORAGE,
   CZ_FUNCTIONS,
   CZ_SLEEP,
+  CZ_RESTART_TO_CONTINUE,
 };
 
 const char *const cz2_pack[LABEL_NUM]={
@@ -1357,6 +1364,7 @@ const char *const cz2_pack[LABEL_NUM]={
   CZ2_CHOOSE_STORAGE,
   CZ2_FUNCTIONS,
   CZ2_SLEEP,
+  CZ2_RESTART_TO_CONTINUE,
 };
 
 // 西班牙语
@@ -1522,6 +1530,7 @@ const char *const es_pack[LABEL_NUM]={
   ES_CHOOSE_STORAGE,
   ES_FUNCTIONS,
   ES_SLEEP,
+  ES_RESTART_TO_CONTINUE,
 };
 
 // 法语
@@ -1687,6 +1696,7 @@ const char *const fr_pack[LABEL_NUM]={
   FR_CHOOSE_STORAGE,
   FR_FUNCTIONS,
   FR_SLEEP,
+  FR_RESTART_TO_CONTINUE,
 };
 
 // 葡萄牙语
@@ -1852,6 +1862,7 @@ const char *const pt_pack[LABEL_NUM]={
   PT_CHOOSE_STORAGE,
   PT_FUNCTIONS,
   PT_SLEEP,
+  PT_RESTART_TO_CONTINUE,
 };
 
 // 意大利语
@@ -2017,6 +2028,7 @@ const char *const it_pack[LABEL_NUM]={
   IT_CHOOSE_STORAGE,
   IT_FUNCTIONS,
   IT_SLEEP,
+  IT_RESTART_TO_CONTINUE,
 };
 
 // 波兰语
@@ -2182,6 +2194,7 @@ const char *const pl_pack[LABEL_NUM]={
   PL_CHOOSE_STORAGE,
   PL_FUNCTIONS,
   PL_SLEEP,
+  PL_RESTART_TO_CONTINUE,
 };
 
 // 斯洛伐克语
@@ -2347,6 +2360,7 @@ const char *const sk_pack[LABEL_NUM]={
   SK_CHOOSE_STORAGE,
   SK_FUNCTIONS,
   SK_SLEEP,
+  SK_RESTART_TO_CONTINUE,
 };
 
 // 韩语
@@ -2512,6 +2526,7 @@ const char *const kr_pack[LABEL_NUM]={
   KR_CHOOSE_STORAGE,
   KR_FUNCTIONS,
   KR_SLEEP,
+  KR_RESTART_TO_CONTINUE,
 };
 
 // 土耳其语
@@ -2677,6 +2692,7 @@ const char *const tu_pack[LABEL_NUM]={
   TU_CHOOSE_STORAGE,
   TU_FUNCTIONS,
   TU_SLEEP,
+  TU_RESTART_TO_CONTINUE,
 };
 
 //#define LANGUAGE_RUSSIAN

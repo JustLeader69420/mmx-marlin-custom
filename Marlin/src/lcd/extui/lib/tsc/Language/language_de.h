@@ -155,5 +155,6 @@
     #define DE_CHOOSE_STORAGE       "Choose a storage device:"
     #define DE_FUNCTIONS            "Functions"
     #define DE_SLEEP                "Turn off screen"
+    #define DE_RESTART_TO_CONTINUE  "Restart to continue"
     
 #endif

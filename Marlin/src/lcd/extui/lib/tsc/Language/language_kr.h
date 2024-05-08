@@ -164,5 +164,6 @@
     #define KR_CHOOSE_STORAGE       "Choose a storage device:"
     #define KR_FUNCTIONS            "Functions"
     #define KR_SLEEP                "Turn off screen"
+    #define KR_RESTART_TO_CONTINUE  "Restart to continue"
 
 #endif  

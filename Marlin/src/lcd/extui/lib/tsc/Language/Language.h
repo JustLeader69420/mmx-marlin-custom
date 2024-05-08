@@ -192,6 +192,7 @@ enum
   LABEL_CHOOSE_STORAGE,
   LABEL_FUNCTIONS, //Custom functions menu
   LABEL_SLEEP,     // Functions menu>turn off screen
+  LABEL_RESTART_TO_CONTINUE, // Restart to continue
   
   LABEL_NUM,    //The amount of labels
   LABEL_BACKGROUND, // I guess this returns null, so nothing gets displayed

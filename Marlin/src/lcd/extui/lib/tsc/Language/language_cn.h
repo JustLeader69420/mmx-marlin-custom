@@ -155,5 +155,6 @@
     #define CN_CHOOSE_STORAGE       "选择存储设备:"
     #define CN_FUNCTIONS            "Functions"
     #define CN_SLEEP                "Turn off screen"
+    #define CN_RESTART_TO_CONTINUE  "Restart to continue"
 
 #endif

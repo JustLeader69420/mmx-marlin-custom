@@ -156,5 +156,6 @@
     #define CZ2_CHOOSE_STORAGE       "Vyberte si úložiště:"
     #define CZ2_FUNCTIONS            "Funkce"
     #define CZ2_SLEEP                "Vypnout obrazovku"
+    #define CZ2_RESTART_TO_CONTINUE  "Je vyžadován restart"
 
 #endif

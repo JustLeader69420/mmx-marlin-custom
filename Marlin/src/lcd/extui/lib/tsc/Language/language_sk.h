@@ -156,5 +156,6 @@
     #define SK_CHOOSE_STORAGE       "Choose a storage device:"
     #define SK_FUNCTIONS            "Funkcie"
     #define SK_SLEEP                "Turn off screen"
+    #define SK_RESTART_TO_CONTINUE  "Restart to continue"
 
 #endif

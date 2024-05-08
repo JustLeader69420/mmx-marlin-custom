@@ -155,5 +155,6 @@
     #define TU_CHOOSE_STORAGE       "Choose a storage device:"
     #define TU_FUNCTIONS            "Functions"
     #define TU_SLEEP                "Turn off screen"
+    #define TU_RESTART_TO_CONTINUE  "Restart to continue"
 
 #endif

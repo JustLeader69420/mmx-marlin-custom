@@ -4,6 +4,7 @@
 #include "../Hal/touch_process.h"
 #include "../flashStore.h"
 #include "../boot.h"
+#include "../TSC_Menu.h"
 
 
 
@@ -23,6 +24,26 @@ LABEL_FUNCTIONS,
 };
 
 
+
+void menuCallBackTSCCalibrationConfirm(void)
+{
+  uint16_t key_num = KEY_GetValue(2, doubleBtnRect);
+  switch(key_num)
+  {
+    case KEY_POPUP_CONFIRM:
+      // TODO: Do magic to calibrate on reboot
+      //paraExists = false;
+      HAL_reboot();
+      //infoMenu.cur--;
+      break;
+
+    case KEY_POPUP_CANCEL:	
+      //infoMenu.cur--;
+      break;		
+  }
+}
+
+
 void menuCallBackFunctionsmenu(void)
 {
   KEY_VALUES key_num = menuKeyGetValue();
@@ -35,12 +56,12 @@ void menuCallBackFunctionsmenu(void)
       break;
 
     case KEY_ICON_1:
-      //popupDrawPage(bottomDoubleBtn, textSelect(LABEL_POWER_FAILED), (uint8_t *)recovery.info.sd_filename, textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
-      TSC_Calibration();
-      storePara();
-      LOGO_ReadDisplay();
+      popupDrawPage(bottomDoubleBtn, textSelect(LABEL_RESTART_TO_CONTINUE), (uint8_t *)"This action requires a reboot to continue", textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
+      menuSetFrontCallBack(menuCallBackTSCCalibrationConfirm);
+
+      //TSC_Calibration();
+      //storePara();
       infoMenu.menu[++infoMenu.cur] = menuStatus;
-      // TODO: Reboot instead, menu moving is weird, could exhaust the menu tree depth limit, if user calibrates screen multiple times without rebooting?
       break;
 
     case KEY_ICON_2:
@@ -49,6 +70,10 @@ void menuCallBackFunctionsmenu(void)
       // To activate screen again, click the screen
 
       //LCD_LED_On(); to turn screen on
+      break;
+
+    case KEY_ICON_3:
+      HAL_reboot();
       break;
 
     case KEY_ICON_7:

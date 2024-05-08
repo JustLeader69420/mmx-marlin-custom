@@ -155,5 +155,6 @@
     #define AM_CHOOSE_STORAGE       "Choose a storage device:"
     #define AM_FUNCTIONS            "Functions"
     #define AM_SLEEP                "Turn off screen"
+    #define AM_RESTART_TO_CONTINUE  "Restart to continue"
     
 #endif

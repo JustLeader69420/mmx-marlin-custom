@@ -155,5 +155,6 @@
     #define ES_CHOOSE_STORAGE       "Choose a storage device:"
     #define ES_FUNCTIONS            "Functions"
     #define ES_SLEEP                "Turn off screen"
+    #define ES_RESTART_TO_CONTINUE  "Restart to continue"
 
 #endif

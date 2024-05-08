@@ -156,5 +156,6 @@
     #define FR_CHOOSE_STORAGE       "Choose a storage device:"
     #define FR_FUNCTIONS            "Functions"
     #define FR_SLEEP                "Turn off screen"
+    #define FR_RESTART_TO_CONTINUE  "Restart to continue"
 
 #endif

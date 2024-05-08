@@ -155,5 +155,6 @@
     #define RU_CHOOSE_STORAGE       "Choose a storage device:"
     #define RU_FUNCTIONS            "Functions"
     #define RU_SLEEP                "Turn off screen"
+    #define RU_RESTART_TO_CONTINUE  "Restart to continue"
     
 #endif

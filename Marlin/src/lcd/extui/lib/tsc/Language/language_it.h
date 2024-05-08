@@ -155,5 +155,6 @@
     #define IT_CHOOSE_STORAGE       "Choose a storage device:"
     #define IT_FUNCTIONS            "Functions"
     #define IT_SLEEP                "Turn off screen"
+    #define IT_RESTART_TO_CONTINUE  "Restart to continue"
     
 #endif

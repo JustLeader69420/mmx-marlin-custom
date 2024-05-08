@@ -155,5 +155,6 @@
     #define PL_CHOOSE_STORAGE       "Choose a storage device:"
     #define PL_FUNCTIONS            "Functions"
     #define PL_SLEEP                "Turn off screen"
+    #define PL_RESTART_TO_CONTINUE  "Restart to continue"
 
 #endif

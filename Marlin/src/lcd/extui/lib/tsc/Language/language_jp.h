@@ -155,5 +155,6 @@
     #define JP_CHOOSE_STORAGE       "Choose a storage device:"
     #define JP_FUNCTIONS            "Functions"
     #define JP_SLEEP                "Turn off screen"
+    #define JP_RESTART_TO_CONTINUE  "Restart to continue"
     
 #endif
