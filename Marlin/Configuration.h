@@ -3,6 +3,9 @@
 // Uncomment to revert modifications to the main status screen
 //#define USEOLDSTATUSSCREEN
 
+#define DEBOUNCE_TIME 500
+#define LONGPRESS_TIME 1000
+
 
 
 

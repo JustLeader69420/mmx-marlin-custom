@@ -160,22 +160,57 @@ uint16_t Key_value(uint8_t total_rect,const GUI_RECT* menuRect)
   return IDLE_TOUCH;
 }
 
+
+
 static uint32_t touchcooldownFromTime = 0;
 
 uint8_t isPress(void)
+	{
+	  // static bool pressed = false;
+	  static uint8_t pressed = 0;
+	  static uint32_t nextTime = 0;
+	
+	  bool nowPressed = !XPT2046_Read_Pen();
+	
+	  if (nowPressed) {
+	    if (READ(LCD_BACKLIGHT_PIN)) {  // If screen is on
+	      if (millis() - touchcooldownFromTime > 500) { // A sort of debounce
+	        if (nextTime <= millis()) {
+	          // pressed = true;
+	          if(millis() >= (nextTime+3000))
+	            pressed = 3;
+	          else
+	            pressed = 1;
+	        } 
+	      }
+	    } else {LCD_LED_On(); touchcooldownFromTime = millis();}
+	  } else {
+	    pressed = false;
+	    nextTime = millis() + 10;
+	  }
+	
+	  return pressed;
+	}
+
+
+
+
+
+/*uint8_t isPress(void)
 {
   // static bool pressed = false;
   static uint8_t pressed = 0;
   static uint32_t nextTime = 0;
+  static uint32_t touchcooldownFromTime = 0;
 
   bool nowPressed = !XPT2046_Read_Pen();
 
   if (nowPressed) {
     if (READ(LCD_BACKLIGHT_PIN)) {  // If screen is on
-      if (millis() - touchcooldownFromTime > 500) { // A sort of debounce
+      if (millis() - touchcooldownFromTime > DEBOUNCE_TIME) { // A sort of debounce
         if (nextTime <= millis()) {
           // pressed = true;
-          if(millis() >= (nextTime+3000))
+          if(millis() >= (nextTime+LONGPRESS_TIME))
             pressed = 3;
           else
             pressed = 1;
@@ -188,7 +223,118 @@ uint8_t isPress(void)
   }
 
   return pressed;
+}*/
+
+/*static uint32_t lastTouchscreenTap = 0;
+static bool lastTouchscreenTouchState = false;
+uint32_t pressedTime = 0;
+uint32_t releasedTime = 0;
+uint32_t pressDuration = 0;
+uint8_t isPress(void) {
+
+  static uint8_t pressed = 0; // 0 = not pressed
+  bool nowPressed = !XPT2046_Read_Pen(); // Is the screen currently pressed down
+  if (nowPressed) { //If the screen is pressed down
+    if (lastTouchscreenTouchState == false) { //If the screen wasn't pressed down
+      pressedTime = millis(); //It is a new press
+    } else { // Screen was pressed down and still is
+      // Don't do anything, just report as no tap because it hasn't finished yet
+      pressed = 0;
+    }
+
+  } else { //nowPressed is false, screen is not pressed down
+    if (lastTouchscreenTouchState == true) { //If it was pressed down
+      if (READ(LCD_BACKLIGHT_PIN)) { //If the screen is on
+        releasedTime = millis(); //Press ended
+        if (releasedTime > pressedTime) { // millis didn't overflow while setting the time variables, proceed normally
+        pressDuration = releasedTime - pressedTime; //Compute press duration
+        
+          if (millis() - lastTouchscreenTap >= DEBOUNCE_TIME) { // If the last tap was more than DEBOUNCE_TIMEms ago, continue with returning as a press
+            if (pressDuration < LONGPRESS_TIME) { //The press was shorter than the long press time
+              pressed = 1; //return that it was a short press
+            } else { // The press was longer or the same as the long press time
+              pressed = 3; //return that it was a long press
+            }
+          } else { // Last tap was too short time ago, don't return as a press, debounce.
+            pressed = 0;
+          }
+
+        } else { //millis likely overflowed, don't do any click processing and wait for another click
+          pressed = 0;
+
+        }
+      } else { //If the screen is off
+        pressed = 0; //It wasn't a tap to process elsewhere, we will turn the screen on instead
+        LCD_LED_On();
+      }
+      lastTouchscreenTap = millis(); // Screen was tapped, set the last tap time
+    } else {
+      pressed = 0;
+    }
+    
+
+  }
+
+
+  // Reset touchcooldownFromTime if it's less than millis in case millis overflowed, to prevent unwanted behaviour.
+  // The millis counter overflows when it reaches its maximum value and wraps back to 0. This happens approximately every 49.71 days if using a 32-bit unsigned long variable.
+  // Without this, screen could potentially stop working if clicked right before overflow? Unlikely but possible.
+  //if (touchcooldownFromTime > millis()) touchcooldownFromTime = millis();
+  
+
+
+
+  lastTouchscreenTouchState = nowPressed; // Set last pressed state
+  return pressed; //We return whether or not the screen has been pressed, and which type of press.
+}*/
+
+
+/*
+uint8_t isPress(void) {
+  // static bool pressed = false;
+  static uint8_t pressed = 0;
+  static uint32_t nextTime = 0;
+
+  bool nowPressed = !XPT2046_Read_Pen();
+
+  // Reset touchcooldownFromTime if it's less than millis in case millis overflowed, to prevent unwanted behaviour.
+  // The millis counter overflows when it reaches its maximum value and wraps back to 0. This happens approximately every 49.71 days if using a 32-bit unsigned long variable.
+  // Without this, screen could potentially stop working if clicked right before overflow? Unlikely but possible.
+  //if (touchcooldownFromTime > millis()) touchcooldownFromTime = millis();
+  if (touchcooldownFromTime > millis()) {
+  uint32_t millisOverflow = UINT32_MAX - touchcooldownFromTime + 1;
+  touchcooldownFromTime -= millisOverflow;
 }
+
+
+  if (nowPressed) { //if screen is pressed
+    if (READ(LCD_BACKLIGHT_PIN)) {  // If screen is on
+
+
+      if (millis() - touchcooldownFromTime > DEBOUNCE_TIME) { // Prevents accidental double clicking, or clicking right after turning screen on
+        if (nextTime <= millis()) {
+          // pressed = true;
+          if(millis() >= (nextTime+LONGPRESS_TIME)) pressed = 3;
+          else pressed = 1;
+          touchcooldownFromTime = millis();
+        } 
+      }
+
+
+    } else {LCD_LED_On(); touchcooldownFromTime = millis();}
+  } else { //if screen is not pressed
+    pressed = false;
+    nextTime = millis() + 10;
+  }
+
+  return pressed; //type of click
+}
+*/
+
+
+
+
+
 
 
 void (*TSC_ReDrawIcon)(uint8_t positon, uint8_t is_press) = NULL;
