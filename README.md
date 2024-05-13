@@ -95,7 +95,7 @@ These are my edits of the MMX firmware, enjoy.
    - show error when no media inserted and return to main menu
  - https://github.com/MINGDA3D/KlipperScreen style menu? 👀
  - Look at some wifi connection options?
- - add delay to clicks to avoid unwanted doubleclicking
+ - overhaul click handling (Marlin/src/lcd/extui/lib/tsc/Hal/touch_process.cpp)
 
 
 # Original README.md
