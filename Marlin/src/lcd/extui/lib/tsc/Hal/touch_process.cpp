@@ -173,14 +173,18 @@ uint8_t isPress(void)
 	  bool nowPressed = !XPT2046_Read_Pen();
 	
 	  if (nowPressed) {
-	    if (READ(LCD_BACKLIGHT_PIN)) {  // If screen is on
-	      if (millis() - touchcooldownFromTime > 500) { // A sort of debounce
+	    if (millis() - touchcooldownFromTime > DEBOUNCE_TIME) { // A sort of debounce
+	      if (READ(LCD_BACKLIGHT_PIN)) {  // If screen is on
 	        if (nextTime <= millis()) {
 	          // pressed = true;
-	          if(millis() >= (nextTime+3000))
+	          if(millis() >= (nextTime+LONGPRESS_TIME)) {
 	            pressed = 3;
-	          else
+              //touchcooldownFromTime = millis(); Messes up the timing?
+            }
+	          else {
 	            pressed = 1;
+              touchcooldownFromTime = millis();
+            }
 	        } 
 	      }
 	    } else {LCD_LED_On(); touchcooldownFromTime = millis();}

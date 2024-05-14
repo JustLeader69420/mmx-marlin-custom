@@ -61,7 +61,7 @@ void menuCallBackFunctionsmenu(void)
 
       //TSC_Calibration();
       //storePara();
-      infoMenu.menu[++infoMenu.cur] = menuStatus;
+      //infoMenu.menu[++infoMenu.cur] = menuStatus;  Probably bad, when repeatedly clicking button, likely increments the page depth continuously, eventually getting to the limit.
       break;
 
     case KEY_ICON_2:
