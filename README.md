@@ -51,6 +51,7 @@ These are my edits of the MMX firmware, enjoy.
  - Put the .bin file in the lowest folder of your portable storage
  - Put the storage into the printer and turn the printer on
  - Wait for the printer to update, you don't have to delete the firmware afterwards, as it gets renamed, but you can still delete the file after the update.
+ - If your printer gets stuck at 100%, just leave it for a minute, then unplug the power and plug it back in. The printer should still be updated.
  - Done! You can now go check out some ![themes](https://git.jldr.eu/justleader/mmx-marlin-themes) too :)
    - Consider installing an icon pack (can be the default one) when switching from the vanilla version, as there are unused icons in the vanilla version, that I use, and that don't get uploaded to the machine when updating icons with the vanilla firmware.
 
@@ -96,6 +97,7 @@ These are my edits of the MMX firmware, enjoy.
  - https://github.com/MINGDA3D/KlipperScreen style menu? 👀
  - Look at some wifi connection options?
  - overhaul click handling (Marlin/src/lcd/extui/lib/tsc/Hal/touch_process.cpp)
+ - respect silent mode setting when beeping
 
 
 # Original README.md
