@@ -99,9 +99,6 @@ These are my edits of the MMX firmware, enjoy.
  - overhaul click handling (Marlin/src/lcd/extui/lib/tsc/Hal/touch_process.cpp)
  - respect silent mode setting when beeping
 
-## Disclaimer
- I am not responsible for any damages caused while using this software.
- If you need help, you may contact me on my Discord server, or by email/another way, which can be found at ![contact.jldr.eu](https://contact.jldr.eu)
 
 # Original README.md
 
