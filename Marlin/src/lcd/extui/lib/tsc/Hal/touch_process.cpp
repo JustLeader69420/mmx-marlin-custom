@@ -186,8 +186,8 @@ uint8_t isPress(void)
               touchcooldownFromTime = millis();
             }
 	        } 
-	      }
-	    } else {LCD_LED_On(); touchcooldownFromTime = millis();}
+	      } else {LCD_LED_On(); touchcooldownFromTime = millis();}
+	    }
 	  } else {
 	    pressed = false;
 	    nextTime = millis() + 10;
