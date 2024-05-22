@@ -3,8 +3,10 @@
 // Uncomment to revert modifications to the main status screen
 //#define USEOLDSTATUSSCREEN
 
-#define DEBOUNCE_TIME 150
+#define DEBOUNCE_TIME 100
 #define LONGPRESS_TIME 200 // Doesn't seem to have an effect on longpress delay in files list menu when trying to delete a file
+
+//#define SHOWINFOSTRING // Shows "Info: " in active language in Ready message on main screen
 
 
 

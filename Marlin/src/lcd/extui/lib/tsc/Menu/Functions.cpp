@@ -33,12 +33,13 @@ void menuCallBackTSCCalibrationConfirm(void)
     case KEY_POPUP_CONFIRM:
       // TODO: Do magic to calibrate on reboot
       //paraExists = false;
-      HAL_reboot();
+      //HAL_reboot(); // TODO: Find another function, doesn't reset. Maybe crash if cannot find?
       //infoMenu.cur--;
       break;
 
     case KEY_POPUP_CANCEL:	
-      //infoMenu.cur--;
+      infoMenu.cur--;
+      //infoMenu.menu[++infoMenu.cur] = menuStatus;
       break;		
   }
 }
@@ -58,28 +59,21 @@ void menuCallBackFunctionsmenu(void)
     case KEY_ICON_1:
       popupDrawPage(bottomDoubleBtn, textSelect(LABEL_RESTART_TO_CONTINUE), (uint8_t *)"This action requires a reboot to continue", textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
       menuSetFrontCallBack(menuCallBackTSCCalibrationConfirm);
-
+      // TODO: Finish TSC Calibration after reboot
       //TSC_Calibration();
       //storePara();
       //infoMenu.menu[++infoMenu.cur] = menuStatus;  Probably bad, when repeatedly clicking button, likely increments the page depth continuously, eventually getting to the limit.
       break;
-
     case KEY_ICON_2:
-      //infoMenu.menu[++infoMenu.cur] = menuFeatureSettings; // Increments menu depth, displays next menu?
-      LCD_LED_Off();
-      // To activate screen again, click the screen
-
-      //LCD_LED_On(); to turn screen on
+      LCD_LED_Off(); //LCD_LED_On() to turn screen on; To activate screen again, click the screen - screen turns on when off and clicked (touch_process.cpp)
+      infoMenu.cur = 0; // Send to main status screen
       break;
-
     case KEY_ICON_3:
       HAL_reboot();
       break;
-
     case KEY_ICON_7:
       infoMenu.cur--;
       break;
-    
     default:
       break;
   }

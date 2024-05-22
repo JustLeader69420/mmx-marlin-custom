@@ -336,15 +336,26 @@ GUI_SetTextMode(GUI_TEXTMODE_TRANS);
 
 char* part1 = (char *)textSelect(LABEL_READY); 
 char* part2 = " | ";
+#ifdef SHOWINFOSTRING
 char* part3 = (char *)textSelect(LABEL_SCREEN_INFO);
 char* part4 = ": ";
+#endif
 char* part5 = (char *)msgbody;
 
+
+#ifdef SHOWINFOSTRING
 char result[strlen(part1) + strlen(part2) + strlen(part3) + strlen(part4) + strlen(part5) + 1];
+#else
+char result[strlen(part1) + strlen(part2) + strlen(part5) + 1];
+#endif
+
+
 strcpy(result, part1);    // Copy part1 into result
 strcat(result, part2);    // Concatenate part2 to result
+#ifdef SHOWINFOSTRING
 strcat(result, part3);    // Concatenate part3 to result
 strcat(result, part4);    // Concatenate part4 to result
+#endif
 strcat(result, part5);    // Concatenate part5 to result
 
 
