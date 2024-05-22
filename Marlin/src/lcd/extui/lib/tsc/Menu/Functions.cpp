@@ -23,7 +23,7 @@ LABEL_FUNCTIONS,
   {ICON_BACK,                 LABEL_BACK},}               //Back button
 };
 
-
+void(* resetFunc) (void) = 0; // Software reboot the microcontroller by jumping to address 0
 
 void menuCallBackTSCCalibrationConfirm(void)
 {
@@ -33,7 +33,9 @@ void menuCallBackTSCCalibrationConfirm(void)
     case KEY_POPUP_CONFIRM:
       // TODO: Do magic to calibrate on reboot
       //paraExists = false;
-      //HAL_reboot(); // TODO: Find another function, doesn't reset. Maybe crash if cannot find?
+
+      
+      resetFunc(); // Reboot the microcontroller
       //infoMenu.cur--;
       break;
 
@@ -57,7 +59,7 @@ void menuCallBackFunctionsmenu(void)
       break;
 
     case KEY_ICON_1:
-      popupDrawPage(bottomDoubleBtn, textSelect(LABEL_RESTART_TO_CONTINUE), (uint8_t *)"This action requires a reboot to continue", textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
+      popupDrawPage(bottomDoubleBtn, textSelect(LABEL_RESTART_TO_CONTINUE), (uint8_t *)"This action requires a reboot to continue. Make sure you aren't printing or doing any data saving :)", textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
       menuSetFrontCallBack(menuCallBackTSCCalibrationConfirm);
       // TODO: Finish TSC Calibration after reboot
       //TSC_Calibration();

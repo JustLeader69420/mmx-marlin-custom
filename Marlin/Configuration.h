@@ -1,12 +1,18 @@
 //           Custom Firmware Settings
 
-// Uncomment to revert modifications to the main status screen
-//#define USEOLDSTATUSSCREEN
+
 
 #define DEBOUNCE_TIME 100
 #define LONGPRESS_TIME 200 // Doesn't seem to have an effect on longpress delay in files list menu when trying to delete a file
 
-//#define SHOWINFOSTRING // Shows "Info: " in active language in Ready message on main screen
+
+
+//                New status screen settings
+//    Uncomment to enable
+
+//#define USEOLDSTATUSSCREEN // Revert modifications to the main status screen
+#define SHOWINFOSTRING // Show "Info: " in active language in Ready message on main status screen
+#define SHOWREMAININGTIME // Show M73 remaining time on status screen
 
 
 

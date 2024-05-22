@@ -361,7 +361,7 @@ uint16_t KEY_GetValue(uint8_t total_rect,const GUI_RECT* menuRect)
         TSC_ReDrawIcon(key_num, 1);
       
       LongTimeTouch = false;
-      touchTime = millis()+1500;
+      touchTime = millis()+LONGPRESS_TIME;
       // SERIAL_ECHOLN("touch start");
     }
   }

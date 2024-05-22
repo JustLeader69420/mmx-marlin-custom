@@ -3,6 +3,7 @@
 #include "../../../../../feature/bedlevel/abl/abl.h"
 #include "../Menu/menu.h"
 #include "FeatureSettings.h"
+#include "../../../../ultralcd.h"
 //1 title, ITEM_PER_PAGE items (icon + label) 
 
 
@@ -328,10 +329,7 @@ void redrawStatusMsg(void)
   Scroll_CreatePara(&msgScroll, (uint8_t *)msgbody, &msgRect);
   GUI_SetBkColor(BK_COLOR);
 #else
-// Call the function to display the text
-uint16_t start_y = (TITLE_END_Y - 10 - BYTE_HEIGHT) / 2;
-GUI_FillRectColor(10, (TITLE_END_Y - 10 - BYTE_HEIGHT) / 2, LCD_WIDTH_PIXEL-10, start_y+BYTE_HEIGHT, TITLE_COLOR);     // Likely clearing space
-GUI_SetTextMode(GUI_TEXTMODE_TRANS);
+
 
 
 char* part1 = (char *)textSelect(LABEL_READY); 
@@ -341,14 +339,26 @@ char* part3 = (char *)textSelect(LABEL_SCREEN_INFO);
 char* part4 = ": ";
 #endif
 char* part5 = (char *)msgbody;
+duration_t part6secs = MarlinUI::remaining_time;
+char part6[32]; // Unlikely to get this big, but just to be sure
+part6secs.toString(part6);
 
 
+
+// Calculate the size required for the result array
+size_t size = strlen(part1) + strlen(part2); // add ready message
 #ifdef SHOWINFOSTRING
-char result[strlen(part1) + strlen(part2) + strlen(part3) + strlen(part4) + strlen(part5) + 1];
-#else
-char result[strlen(part1) + strlen(part2) + strlen(part5) + 1];
+size += strlen(part3) + strlen(part4); // add info string and separator
 #endif
+#ifdef SHOWREMAININGTIME
+size += strlen(part6) + strlen(part2); // add remaining time and separator
+#endif
+size += strlen(part5) + 1;  // msgbody and +1 for the null terminator
 
+// Declare the result array with the calculated size
+char result[size];
+
+//get_remaining_time()
 
 strcpy(result, part1);    // Copy part1 into result
 strcat(result, part2);    // Concatenate part2 to result
@@ -358,7 +368,10 @@ strcat(result, part4);    // Concatenate part4 to result
 #endif
 strcat(result, part5);    // Concatenate part5 to result
 
-
+// Call the function to display the text
+uint16_t start_y = (TITLE_END_Y - 10 - BYTE_HEIGHT) / 2;
+GUI_FillRectColor(10, (TITLE_END_Y - 10 - BYTE_HEIGHT) / 2, LCD_WIDTH_PIXEL-10, start_y+BYTE_HEIGHT, TITLE_COLOR);     // Likely clearing space
+GUI_SetTextMode(GUI_TEXTMODE_TRANS);
 GUI_DispLenStringCustom(10, start_y, result, LCD_WIDTH_PIXEL-20);
 GUI_SetTextMode(GUI_TEXTMODE_NORMAL);
 #endif
