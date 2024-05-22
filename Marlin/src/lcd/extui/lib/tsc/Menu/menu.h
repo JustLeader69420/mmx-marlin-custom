@@ -284,6 +284,7 @@ uint16_t   menuKeyGetLevelingValue(void);
 void loopBackEnd(void);
 void loopFrontEnd(void);
 void loopProcess (void);
+void menuClearGaps(void);
 
 #endif
 

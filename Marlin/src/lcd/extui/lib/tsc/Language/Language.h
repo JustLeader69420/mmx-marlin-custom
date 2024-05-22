@@ -194,6 +194,7 @@ enum
   LABEL_SLEEP,     // Functions menu>turn off screen
   LABEL_RESTART_TO_CONTINUE, // Restart to continue
   LABEL_RESTART,             // Restart machine button
+  LABEL_REBOOTING,           // Rebooting message
   
   LABEL_NUM,    //The amount of labels
   LABEL_BACKGROUND, // I guess this returns null, so nothing gets displayed

@@ -157,5 +157,6 @@
     #define JP_SLEEP                "Turn off screen"
     #define JP_RESTART_TO_CONTINUE  "Restart to continue"
     #define JP_RESTART              "Restart"
+    #define JP_REBOOTING            "The machine is now rebooting..."
     
 #endif

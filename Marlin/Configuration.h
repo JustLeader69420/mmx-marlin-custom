@@ -2,8 +2,8 @@
 
 
 
-#define DEBOUNCE_TIME 100
-#define LONGPRESS_TIME 200 // Doesn't seem to have an effect on longpress delay in files list menu when trying to delete a file
+#define DEBOUNCE_TIME 100 // Taps cannot happen faster than 1000/DEBOUNCE_TIME per second
+#define LONGPRESS_TIME 500 // Long press is activated after LONGPRESS_TIME ms
 
 
 

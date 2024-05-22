@@ -157,5 +157,6 @@
     #define DE_SLEEP                "Turn off screen"
     #define DE_RESTART_TO_CONTINUE  "Restart to continue"
     #define DE_RESTART              "Restart"
+    #define DE_REBOOTING            "The machine is now rebooting..."
     
 #endif

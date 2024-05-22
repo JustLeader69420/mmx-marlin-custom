@@ -36,6 +36,8 @@ void drawTemperature(void);
 void statusScreen_setMsg(const uint8_t *title, const uint8_t *msg);
 void drawStatusScreenMsg(void);
 
+const uint8_t* GUI_DispLenStringCustom(int16_t x, int16_t y, const char *text, uint16_t pixelWidth);
+
 
 
 

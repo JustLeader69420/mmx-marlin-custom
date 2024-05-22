@@ -158,5 +158,6 @@
     #define CZ_SLEEP                "Vypnout obrazovku"
     #define CZ_RESTART_TO_CONTINUE  "Je vyžadován restart"
     #define CZ_RESTART              "Restart"
+    #define CZ_REBOOTING            "Tiskárna se nyní restartuje..."
 
 #endif

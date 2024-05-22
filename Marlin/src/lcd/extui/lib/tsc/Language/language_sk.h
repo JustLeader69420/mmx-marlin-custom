@@ -158,5 +158,6 @@
     #define SK_SLEEP                "Turn off screen"
     #define SK_RESTART_TO_CONTINUE  "Restart to continue"
     #define SK_RESTART              "Restart"
+    #define SK_REBOOTING            "The machine is now rebooting..."
 
 #endif

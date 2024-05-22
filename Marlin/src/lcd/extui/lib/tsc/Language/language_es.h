@@ -157,5 +157,6 @@
     #define ES_SLEEP                "Turn off screen"
     #define ES_RESTART_TO_CONTINUE  "Restart to continue"
     #define ES_RESTART              "Restart"
+    #define ES_REBOOTING            "The machine is now rebooting..."
 
 #endif

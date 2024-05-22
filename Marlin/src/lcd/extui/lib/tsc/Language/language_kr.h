@@ -166,5 +166,6 @@
     #define KR_SLEEP                "Turn off screen"
     #define KR_RESTART_TO_CONTINUE  "Restart to continue"
     #define KR_RESTART              "Restart"
+    #define KR_REBOOTING            "The machine is now rebooting..."
 
 #endif  

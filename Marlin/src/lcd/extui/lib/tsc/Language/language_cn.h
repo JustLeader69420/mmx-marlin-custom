@@ -157,5 +157,6 @@
     #define CN_SLEEP                "Turn off screen"
     #define CN_RESTART_TO_CONTINUE  "Restart to continue"
     #define CN_RESTART              "Restart"
+    #define CN_REBOOTING            "The machine is now rebooting..."
 
 #endif

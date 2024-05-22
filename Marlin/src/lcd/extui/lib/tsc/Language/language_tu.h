@@ -157,5 +157,6 @@
     #define TU_SLEEP                "Turn off screen"
     #define TU_RESTART_TO_CONTINUE  "Restart to continue"
     #define TU_RESTART              "Restart"
+    #define TU_REBOOTING            "The machine is now rebooting..."
 
 #endif

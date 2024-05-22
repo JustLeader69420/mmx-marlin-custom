@@ -157,5 +157,6 @@
     #define EN_SLEEP                "Turn off screen"
     #define EN_RESTART_TO_CONTINUE  "Restart to continue"
     #define EN_RESTART              "Restart"
+    #define EN_REBOOTING            "The machine is now rebooting..."
 
 #endif

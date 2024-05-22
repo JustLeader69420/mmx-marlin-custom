@@ -25,6 +25,13 @@ LABEL_FUNCTIONS,
 
 void(* resetFunc) (void) = 0; // Software reboot the microcontroller by jumping to address 0
 
+void showResetMessage() {
+  GUI_Clear(BK_COLOR);
+  //menuClearGaps();
+  uint16_t start_y = (TITLE_END_Y - 10 - BYTE_HEIGHT) / 2;
+  GUI_DispLenStringCustom(10, start_y, (char *) textSelect(LABEL_REBOOTING), LCD_WIDTH_PIXEL-20);
+}
+
 void menuCallBackTSCCalibrationConfirm(void)
 {
   uint16_t key_num = KEY_GetValue(2, doubleBtnRect);
@@ -33,6 +40,7 @@ void menuCallBackTSCCalibrationConfirm(void)
     case KEY_POPUP_CONFIRM:
       infoSettings.tsccalibnextboot = 1; // Set calibration to run on next boot
       storePara(); // Store settings
+      showResetMessage();
       resetFunc(); // Reboot the microcontroller
       //infoMenu.cur--;
       break;
@@ -50,6 +58,7 @@ void menuCallBackRebootConfirm(void)
   switch(key_num)
   {
     case KEY_POPUP_CONFIRM:
+      showResetMessage();
       resetFunc(); // Reboot the microcontroller
       break;
 

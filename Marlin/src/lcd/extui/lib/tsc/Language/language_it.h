@@ -157,5 +157,6 @@
     #define IT_SLEEP                "Turn off screen"
     #define IT_RESTART_TO_CONTINUE  "Restart to continue"
     #define IT_RESTART              "Restart"
+    #define IT_REBOOTING            "The machine is now rebooting..."
     
 #endif
