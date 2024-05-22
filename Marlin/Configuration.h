@@ -11,6 +11,7 @@
 //    Uncomment to enable
 
 //#define USEOLDSTATUSSCREEN // Revert modifications to the main status screen
+// TODO: Make work and add option to remove ready message too
 #define SHOWINFOSTRING // Show "Info: " in active language in Ready message on main status screen
 #define SHOWREMAININGTIME // Show M73 remaining time on status screen
 
