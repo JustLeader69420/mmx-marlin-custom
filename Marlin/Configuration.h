@@ -3,7 +3,7 @@
 // Uncomment to revert modifications to the main status screen
 //#define USEOLDSTATUSSCREEN
 
-#define DEBOUNCE_TIME 200
+#define DEBOUNCE_TIME 150
 #define LONGPRESS_TIME 200 // Doesn't seem to have an effect on longpress delay in files list menu when trying to delete a file
 
 
