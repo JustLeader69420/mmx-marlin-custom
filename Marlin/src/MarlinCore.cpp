@@ -29,6 +29,8 @@
  */
 
 /********************head*************************/
+//#include <Preferences.h>
+//Preferences prefs;
 #include "MarlinCore.h"
 #include "module/settings.h"
 #if ENABLED(MARLIN_DEV_MODE)
@@ -1069,6 +1071,10 @@ void LCD_Setup();
 void setup() {
 
   tmc_standby_setup();  // TMC Low Power Standby pins must be set early or they're not usable
+
+
+  //prefs.begin("mmx-marlin-custom");
+
 
   #if ENABLED(MARLIN_DEV_MODE)
     auto log_current_ms = [&](PGM_P const msg) {
