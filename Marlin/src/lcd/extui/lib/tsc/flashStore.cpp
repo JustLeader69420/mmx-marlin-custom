@@ -6,6 +6,7 @@
 
 #define PARA_SIZE 256  //bytes
 #define TSC_SIGN  0x20200707 // DO NOT MODIFY
+// TODO: Decipher and consider modifying:
 #define PARA_SIGN 0x20200708 // If a new setting parameter is added, modify here and initialize the initial value in the "infoSettingsReset()" function
 
 extern uint32_t TSC_Para[7];        //

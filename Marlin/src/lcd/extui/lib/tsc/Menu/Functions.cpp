@@ -75,19 +75,23 @@ void menuCallBackFunctionsmenu(void)
   switch(key_num)
   {
     case KEY_ICON_0: //Turn screen off
+      // TODO: Add one-time popup about turning screen on again
       LCD_LED_Off(); //LCD_LED_On() to turn screen on; To activate screen again, click the screen - screen turns on when off and clicked (touch_process.cpp)
       infoMenu.cur = 0; // Send to main status screen
       break;
     case KEY_ICON_1: //Resume print
+      // TODO: Add confirmation?
       //popupDrawPage(bottomDoubleBtn, textSelect(LABEL_POWER_FAILED), (uint8_t *)recovery.info.sd_filename, textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
       ExtUI::setUserConfirmed();
       ExtUI::resumePrint();
       break;
     case KEY_ICON_2: //Restart machine
+      // TODO: Add to Language files
       popupDrawPage(bottomDoubleBtn, textSelect(LABEL_CONFIRM), (uint8_t *)"Are you sure you want to restart the machine?", textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
       menuSetFrontCallBack(menuCallBackRebootConfirm);
       break;
     case KEY_ICON_3: //TSC Calibration
+      // TODO: Add to Language files
       popupDrawPage(bottomDoubleBtn, textSelect(LABEL_RESTART_TO_CONTINUE), (uint8_t *)"This action requires a reboot to continue. Make sure you aren't printing or doing any data saving :)", textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
       menuSetFrontCallBack(menuCallBackTSCCalibrationConfirm);
       break;
