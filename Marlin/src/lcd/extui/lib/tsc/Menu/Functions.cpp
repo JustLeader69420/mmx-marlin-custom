@@ -33,6 +33,8 @@ void menuCallBackTSCCalibrationConfirm(void)
     case KEY_POPUP_CONFIRM:
       // TODO: Do magic to calibrate on reboot
       //paraExists = false;
+      //TSC_Calibration();
+      //storePara();
 
       
       resetFunc(); // Reboot the microcontroller
@@ -43,6 +45,21 @@ void menuCallBackTSCCalibrationConfirm(void)
       infoMenu.cur--;
       //infoMenu.menu[++infoMenu.cur] = menuStatus;
       break;		
+  }
+}
+
+void menuCallBackRebootConfirm(void)
+{
+  uint16_t key_num = KEY_GetValue(2, doubleBtnRect);
+  switch(key_num)
+  {
+    case KEY_POPUP_CONFIRM:
+      resetFunc(); // Reboot the microcontroller
+      break;
+
+    case KEY_POPUP_CANCEL:	
+      infoMenu.cur--;
+      break;
   }
 }
 
@@ -61,17 +78,14 @@ void menuCallBackFunctionsmenu(void)
     case KEY_ICON_1:
       popupDrawPage(bottomDoubleBtn, textSelect(LABEL_RESTART_TO_CONTINUE), (uint8_t *)"This action requires a reboot to continue. Make sure you aren't printing or doing any data saving :)", textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
       menuSetFrontCallBack(menuCallBackTSCCalibrationConfirm);
-      // TODO: Finish TSC Calibration after reboot
-      //TSC_Calibration();
-      //storePara();
-      //infoMenu.menu[++infoMenu.cur] = menuStatus;  Probably bad, when repeatedly clicking button, likely increments the page depth continuously, eventually getting to the limit.
       break;
     case KEY_ICON_2:
       LCD_LED_Off(); //LCD_LED_On() to turn screen on; To activate screen again, click the screen - screen turns on when off and clicked (touch_process.cpp)
       infoMenu.cur = 0; // Send to main status screen
       break;
     case KEY_ICON_3:
-      HAL_reboot();
+      popupDrawPage(bottomDoubleBtn, textSelect(LABEL_CONFIRM), (uint8_t *)"Are you sure you want to restart the machine?", textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
+      menuSetFrontCallBack(menuCallBackRebootConfirm);
       break;
     case KEY_ICON_7:
       infoMenu.cur--;

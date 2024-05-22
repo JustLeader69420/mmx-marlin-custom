@@ -346,7 +346,7 @@ part6secs.toString(part6);
 
 
 // Calculate the size required for the result array
-size_t size = strlen(part1) + strlen(part2); // add ready message
+size_t size = strlen(part1) + strlen(part2); // add ready message and separator
 #ifdef SHOWINFOSTRING
 size += strlen(part3) + strlen(part4); // add info string and separator
 #endif
