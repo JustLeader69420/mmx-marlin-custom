@@ -156,5 +156,6 @@
     #define JP_FUNCTIONS            "Functions"
     #define JP_SLEEP                "Turn off screen"
     #define JP_RESTART_TO_CONTINUE  "Restart to continue"
+    #define JP_RESTART              "Restart"
     
 #endif

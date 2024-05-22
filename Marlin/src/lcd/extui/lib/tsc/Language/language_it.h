@@ -156,5 +156,6 @@
     #define IT_FUNCTIONS            "Functions"
     #define IT_SLEEP                "Turn off screen"
     #define IT_RESTART_TO_CONTINUE  "Restart to continue"
+    #define IT_RESTART              "Restart"
     
 #endif

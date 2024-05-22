@@ -156,5 +156,6 @@
     #define PL_FUNCTIONS            "Functions"
     #define PL_SLEEP                "Turn off screen"
     #define PL_RESTART_TO_CONTINUE  "Restart to continue"
+    #define PL_RESTART              "Restart"
 
 #endif

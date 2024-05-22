@@ -156,5 +156,6 @@
     #define PT_FUNCTIONS            "Functions"
     #define PT_SLEEP                "Turn off screen"
     #define PT_RESTART_TO_CONTINUE  "Restart to continue"
+    #define PT_RESTART              "Restart"
     
 #endif

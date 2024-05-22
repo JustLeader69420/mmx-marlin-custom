@@ -157,5 +157,6 @@
     #define FR_FUNCTIONS            "Functions"
     #define FR_SLEEP                "Turn off screen"
     #define FR_RESTART_TO_CONTINUE  "Restart to continue"
+    #define FR_RESTART              "Restart"
 
 #endif

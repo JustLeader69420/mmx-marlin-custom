@@ -156,5 +156,6 @@
     #define RU_FUNCTIONS            "Functions"
     #define RU_SLEEP                "Turn off screen"
     #define RU_RESTART_TO_CONTINUE  "Restart to continue"
+    #define RU_RESTART              "Restart"
     
 #endif

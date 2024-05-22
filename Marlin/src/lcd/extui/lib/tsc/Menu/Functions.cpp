@@ -13,10 +13,10 @@ MENUITEMS functionsmenuItems = {
 LABEL_FUNCTIONS,
 // icon                       label
  {
-  {ICON_RESUME,               LABEL_RESUME},              //Resume print button
-  {ICON_TSCADJUST,            LABEL_TOUCHSCREEN_ADJUST},  //Touchscreen calibration button
   {ICON_SHUTDOWN,             LABEL_SLEEP},               //Turn display off button
-  {ICON_BACKGROUND,           LABEL_BACKGROUND}, 
+  {ICON_RESUME,               LABEL_RESUME},              //Resume print button
+  {ICON_SHUTDOWN,             LABEL_RESTART},          //Reboot machine button
+  {ICON_TSCADJUST,            LABEL_TOUCHSCREEN_ADJUST},  //Touchscreen calibration button
   {ICON_BACKGROUND,           LABEL_BACKGROUND}, 
   {ICON_BACKGROUND,           LABEL_BACKGROUND}, 
   {ICON_BACKGROUND,           LABEL_BACKGROUND},
@@ -69,25 +69,24 @@ void menuCallBackFunctionsmenu(void)
   KEY_VALUES key_num = menuKeyGetValue();
   switch(key_num)
   {
-    case KEY_ICON_0: 
+    case KEY_ICON_0: //Turn screen off
+      LCD_LED_Off(); //LCD_LED_On() to turn screen on; To activate screen again, click the screen - screen turns on when off and clicked (touch_process.cpp)
+      infoMenu.cur = 0; // Send to main status screen
+      break;
+    case KEY_ICON_1: //Resume print
       //popupDrawPage(bottomDoubleBtn, textSelect(LABEL_POWER_FAILED), (uint8_t *)recovery.info.sd_filename, textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
       ExtUI::setUserConfirmed();
       ExtUI::resumePrint();
       break;
-
-    case KEY_ICON_1:
-      popupDrawPage(bottomDoubleBtn, textSelect(LABEL_RESTART_TO_CONTINUE), (uint8_t *)"This action requires a reboot to continue. Make sure you aren't printing or doing any data saving :)", textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
-      menuSetFrontCallBack(menuCallBackTSCCalibrationConfirm);
-      break;
-    case KEY_ICON_2:
-      LCD_LED_Off(); //LCD_LED_On() to turn screen on; To activate screen again, click the screen - screen turns on when off and clicked (touch_process.cpp)
-      infoMenu.cur = 0; // Send to main status screen
-      break;
-    case KEY_ICON_3:
+    case KEY_ICON_2: //Restart machine
       popupDrawPage(bottomDoubleBtn, textSelect(LABEL_CONFIRM), (uint8_t *)"Are you sure you want to restart the machine?", textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
       menuSetFrontCallBack(menuCallBackRebootConfirm);
       break;
-    case KEY_ICON_7:
+    case KEY_ICON_3: //TSC Calibration
+      popupDrawPage(bottomDoubleBtn, textSelect(LABEL_RESTART_TO_CONTINUE), (uint8_t *)"This action requires a reboot to continue. Make sure you aren't printing or doing any data saving :)", textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
+      menuSetFrontCallBack(menuCallBackTSCCalibrationConfirm);
+      break;
+    case KEY_ICON_7: //Back button
       infoMenu.cur--;
       break;
     default:

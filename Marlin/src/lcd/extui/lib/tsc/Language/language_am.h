@@ -156,5 +156,6 @@
     #define AM_FUNCTIONS            "Functions"
     #define AM_SLEEP                "Turn off screen"
     #define AM_RESTART_TO_CONTINUE  "Restart to continue"
+    #define AM_RESTART              "Restart"
     
 #endif

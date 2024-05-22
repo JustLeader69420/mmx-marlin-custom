@@ -156,5 +156,6 @@
     #define EN_FUNCTIONS            "Functions"
     #define EN_SLEEP                "Turn off screen"
     #define EN_RESTART_TO_CONTINUE  "Restart to continue"
+    #define EN_RESTART              "Restart"
 
 #endif

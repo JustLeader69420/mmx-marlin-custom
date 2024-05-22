@@ -156,5 +156,6 @@
     #define TU_FUNCTIONS            "Functions"
     #define TU_SLEEP                "Turn off screen"
     #define TU_RESTART_TO_CONTINUE  "Restart to continue"
+    #define TU_RESTART              "Restart"
 
 #endif
