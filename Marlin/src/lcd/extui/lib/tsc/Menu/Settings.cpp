@@ -37,6 +37,7 @@ void infoSettingsReset(void)
   // infoSettings.font_color = ST7920_FNCOLOR;
   infoSettings.silent = 0;
   infoSettings.auto_off = 0;
+  infoSettings.tsccalibnextboot = 0;
 }
 
 void loopCheckSettings(void)

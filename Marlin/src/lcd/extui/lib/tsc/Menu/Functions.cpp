@@ -31,12 +31,8 @@ void menuCallBackTSCCalibrationConfirm(void)
   switch(key_num)
   {
     case KEY_POPUP_CONFIRM:
-      // TODO: Do magic to calibrate on reboot
-      //paraExists = false;
-      //TSC_Calibration();
-      //storePara();
-
-      
+      infoSettings.tsccalibnextboot = 1; // Set calibration to run on next boot
+      storePara(); // Store settings
       resetFunc(); // Reboot the microcontroller
       //infoMenu.cur--;
       break;

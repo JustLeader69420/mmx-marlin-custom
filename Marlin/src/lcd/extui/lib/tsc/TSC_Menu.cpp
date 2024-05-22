@@ -118,9 +118,10 @@ void LCD_Setup() {
   LOGO_ReadDisplay();
   boot.scanUpdates();
   // while(1);
-  if(readStoredPara() == false || boot.scanResetFile()) // Read settings parameter
+  if(readStoredPara() == false || boot.scanResetFile() || infoSettings.tsccalibnextboot == 1) // Read settings parameter
   {
     TSC_Calibration();
+    infoSettings.tsccalibnextboot = 0;
     storePara();
     LOGO_ReadDisplay();
   }
