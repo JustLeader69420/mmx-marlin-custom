@@ -81,7 +81,7 @@
   // #define X_BED_SIZE 210
   #define X_BED_SIZE 230
   #define Y_BED_SIZE 230
-  #define Z_BED_SIZE 260
+  #define Z_BED_SIZE 256
 #endif
 
 #define D301_AUTO_LEVELING
