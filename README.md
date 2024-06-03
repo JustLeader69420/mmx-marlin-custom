@@ -24,6 +24,7 @@ These are my edits of the MMX firmware, enjoy.
      - might be a little buggy
        - I believe that at the moment the machine crashes and reboots when there is no action 
  - Because of the menu modifications, a few icons have been enabled, which previously only existed in the TFT35 folder, but weren't used when updating icons, if you see empty icons, download a TFT35 theme folder from either Mingda, or ![my themes repository](https://git.justleader.eu/justleader/mmx-marlin-themes), then install them.
+ - Make Preheat filament types changeable (for now only in sourcecode before building) in Configuration.h
  - \+ there might be a few more changes, I try to add them to the list when they are finished
  
 ## Notes:
@@ -98,6 +99,8 @@ These are my edits of the MMX firmware, enjoy.
  - Look at some wifi connection options?
  - overhaul click handling (Marlin/src/lcd/extui/lib/tsc/Hal/touch_process.cpp)
  - respect silent mode setting when beeping
+ - Custom GCODE to change all menu settings
+   - also things like preheat filament types (custom filament name)
 
 
 # Original README.md
