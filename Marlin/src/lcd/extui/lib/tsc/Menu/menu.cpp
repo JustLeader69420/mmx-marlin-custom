@@ -266,6 +266,19 @@ void menuDrawItem(const ITEM *item, uint8_t positon)
 }
 
 
+/// @brief Draws label without button icon at button location, takes uint8_t instead of icon and label index combo
+/// @param content Label content
+/// @param positon Button number
+void menuDrawItemLabel(const uint8_t* content, uint8_t positon)
+{
+  //uint8_t *content = labelGetAddress(&item->label);
+  //const GUI_RECT *rect = rect_of_key + positon;
+  //rect = rect_of_key + ITEM_PER_PAGE + positon;
+  const GUI_RECT *rect = rect_of_key + ITEM_PER_PAGE + positon;
+  //GUI_ClearPrect(rect);
+  GUI_DispStringInPrect(rect, content);
+}
+
 static REMINDER reminder = {{0, 0, LCD_WIDTH_PIXEL, TITLE_END_Y-10}, 0, STATUS_IDLE, LABEL_BACKGROUND};
 static REMINDER volumeReminder = {{0, 0, LCD_WIDTH_PIXEL, TITLE_END_Y-10}, 0, STATUS_IDLE, LABEL_BACKGROUND};
 

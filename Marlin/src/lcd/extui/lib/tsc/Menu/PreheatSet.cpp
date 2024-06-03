@@ -5,9 +5,9 @@ MENUITEMS preheatSetItems = {       // 选择界面
     // title
     LABEL_SETTINGS,
     // icon                       label
-    {{ICON_PREHEAT,              LABEL_PREHEAT_PLA},
-    {ICON_PREHEAT,              LABEL_PREHEAT_ABS},
-    {ICON_PREHEAT,              LABEL_PREHEAT_TPU},
+    {{ICON_PREHEAT,              LABEL_BACKGROUND}, //was LABEL_PREHEAT_PLA
+    {ICON_PREHEAT,              LABEL_BACKGROUND}, //was LABEL_PREHEAT_ABS
+    {ICON_PREHEAT,              LABEL_BACKGROUND}, //was LABEL_PREHEAT_TPU
     // {ICON_BACKGROUND,           LABEL_BACKGROUND},
     {ICON_BACKGROUND,           LABEL_BACKGROUND},
     {ICON_BACKGROUND,           LABEL_BACKGROUND},
@@ -144,17 +144,17 @@ void menuCallBackPreHeatSet(void){
     KEY_VALUES  key_num = menuKeyGetValue();
     switch(key_num){
         case KEY_ICON_0:
-            MaterialNum = THE_PLA;
+            MaterialNum = THE_PREHEAT1;
             infoMenu.menu[++infoMenu.cur] = menuSetPreheat;
         break;
 
         case KEY_ICON_1:
-            MaterialNum = THE_ABS;
+            MaterialNum = THE_PREHEAT2;
             infoMenu.menu[++infoMenu.cur] = menuSetPreheat;
         break;
 
         case KEY_ICON_2:
-            MaterialNum = THE_TPU;
+            MaterialNum = THE_PREHEAT3;
             infoMenu.menu[++infoMenu.cur] = menuSetPreheat;
         break;
         
@@ -168,6 +168,9 @@ void menuCallBackPreHeatSet(void){
 
 void menuPreheatSet(void){
     menuDrawPage(&preheatSetItems);
+    menuDrawItemLabel(PREHEAT_1_LABEL, 0);
+    menuDrawItemLabel(PREHEAT_2_LABEL, 1);
+    menuDrawItemLabel(PREHEAT_3_LABEL, 2);
     drawTemperatureInfo();
     menuSetFrontCallBack(menuCallBackPreHeatSet);
 }

@@ -162,7 +162,7 @@ enum
   LABEL_FILAMENT_RUNOUT,  
   LABEL_PREHEAT,
   LABEL_PREHEAT_BOTH,
-  LABEL_PREHEAT_PLA,
+  LABEL_PREHEAT_PLA, // TODO: Change to preheat1 and preheat2, then make customizable in Configuration.h
   LABEL_PREHEAT_PETG,
   LABEL_PREHEAT_ABS,
   LABEL_PREHEAT_TPU,

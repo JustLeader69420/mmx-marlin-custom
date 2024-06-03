@@ -16,6 +16,23 @@
 #define SHOWREMAININGTIME // Show M73 remaining time on status screen
 
 
+// Preheat Constants
+
+#define PREHEAT_1_LABEL       (uint8_t*)"PLA"
+#define PREHEAT_1_TEMP_HOTEND 170
+#define PREHEAT_1_TEMP_BED     50
+#define PREHEAT_1_FAN_SPEED   255 // Value from 0 to 255
+
+#define PREHEAT_2_LABEL       (uint8_t*)"PETG"
+#define PREHEAT_2_TEMP_HOTEND 200
+#define PREHEAT_2_TEMP_BED    110
+#define PREHEAT_2_FAN_SPEED   255 // Value from 0 to 255
+
+#define PREHEAT_3_LABEL       (uint8_t*)"ABS"
+#define PREHEAT_3_TEMP_HOTEND 240
+#define PREHEAT_3_TEMP_BED    110
+#define PREHEAT_3_FAN_SPEED   255 // Value from 0 to 255
+
 
 
 
@@ -156,7 +173,7 @@
 #ifdef OTHER_CUSTOM
   #define STRING_CONFIG_H_AUTHOR "(d301)" // Who made the changes.
 #else
-  #define STRING_CONFIG_H_AUTHOR "(langgo, MD d301)" // Who made the changes.
+  #define STRING_CONFIG_H_AUTHOR "(langgo, MD d301, JustLeader)" // Who made the changes.
 #endif
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
@@ -1746,6 +1763,7 @@
 // @section temperature
 
 // Preheat Constants
+/* // NOTE: Moved to beginning of file
 #define PREHEAT_1_LABEL       "PLA"
 #define PREHEAT_1_TEMP_HOTEND 170
 #define PREHEAT_1_TEMP_BED     50
@@ -1756,6 +1774,11 @@
 #define PREHEAT_2_TEMP_BED    110
 #define PREHEAT_2_FAN_SPEED   255 // Value from 0 to 255
 
+#define PREHEAT_3_LABEL       "ABS"
+#define PREHEAT_3_TEMP_HOTEND 240
+#define PREHEAT_3_TEMP_BED    110
+#define PREHEAT_3_FAN_SPEED   255 // Value from 0 to 255
+*/
 /**
  * Nozzle Park
  *

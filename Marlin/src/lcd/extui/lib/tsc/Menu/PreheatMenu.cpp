@@ -7,9 +7,9 @@ MENUITEMS preheatItems = {
 LABEL_PREHEAT,
 // icon                       label
   {
-    {ICON_PREHEAT,              LABEL_PREHEAT_PLA},
-    {ICON_PREHEAT,              LABEL_PREHEAT_ABS},
-    {ICON_PREHEAT,              LABEL_PREHEAT_TPU},
+    {ICON_PREHEAT,              LABEL_BACKGROUND}, //was LABEL_PREHEAT_PLA
+    {ICON_PREHEAT,              LABEL_BACKGROUND}, //was LABEL_PREHEAT_ABS
+    {ICON_PREHEAT,              LABEL_BACKGROUND}, //was LABEL_PREHEAT_TPU
     {ICON_BOTH,                 LABEL_PREHEAT_BOTH},
     {ICON_STOP,                 LABEL_STOP},
     {ICON_BACKGROUND,           LABEL_BACKGROUND},
@@ -90,22 +90,22 @@ void drawTemperatureInfo(void)
   GUI_SetBkColor(WHITE);
 
   GUI_ClearPrect(&info_rect[0]);
-  GUI_DispDec(info_rect[0].x0, info_rect[0].y0, PreheatTemp[THE_PLA][THE_NOZZLE], 3, LEFT);
+  GUI_DispDec(info_rect[0].x0, info_rect[0].y0, PreheatTemp[THE_PREHEAT1][THE_NOZZLE], 3, LEFT);
 
   GUI_ClearPrect(&info_rect[1]);
-  GUI_DispDec(info_rect[1].x0, info_rect[1].y0, PreheatTemp[THE_PLA][THE_BED], 3, LEFT);
+  GUI_DispDec(info_rect[1].x0, info_rect[1].y0, PreheatTemp[THE_PREHEAT1][THE_BED], 3, LEFT);
 
   GUI_ClearPrect(&info_rect[2]);
-  GUI_DispDec(info_rect[2].x0, info_rect[2].y0, PreheatTemp[THE_ABS][THE_NOZZLE], 3, LEFT);
+  GUI_DispDec(info_rect[2].x0, info_rect[2].y0, PreheatTemp[THE_PREHEAT2][THE_NOZZLE], 3, LEFT);
 
   GUI_ClearPrect(&info_rect[3]);
-  GUI_DispDec(info_rect[3].x0, info_rect[3].y0, PreheatTemp[THE_ABS][THE_BED], 3, LEFT);
+  GUI_DispDec(info_rect[3].x0, info_rect[3].y0, PreheatTemp[THE_PREHEAT2][THE_BED], 3, LEFT);
 
   GUI_ClearPrect(&info_rect[4]);
-  GUI_DispDec(info_rect[4].x0, info_rect[4].y0, PreheatTemp[THE_TPU][THE_NOZZLE], 3, LEFT);
+  GUI_DispDec(info_rect[4].x0, info_rect[4].y0, PreheatTemp[THE_PREHEAT3][THE_NOZZLE], 3, LEFT);
 
   GUI_ClearPrect(&info_rect[5]);
-  GUI_DispDec(info_rect[5].x0, info_rect[5].y0, PreheatTemp[THE_TPU][THE_BED], 3, LEFT);
+  GUI_DispDec(info_rect[5].x0, info_rect[5].y0, PreheatTemp[THE_PREHEAT3][THE_BED], 3, LEFT);
   
   GUI_SetColor(FK_COLOR);
   GUI_SetBkColor(BK_COLOR);
@@ -116,40 +116,40 @@ static void drawTemperatureColor(void)
   GUI_SetBkColor(WHITE);
 
   {
-    if(ExtUI::getTargetTemp_celsius(ExtUI::getActiveTool()) == PreheatTemp[THE_PLA][THE_NOZZLE]) GUI_SetColor(ORANGE);
+    if(ExtUI::getTargetTemp_celsius(ExtUI::getActiveTool()) == PreheatTemp[THE_PREHEAT1][THE_NOZZLE]) GUI_SetColor(ORANGE);
     else  GUI_SetColor(BLACK);
     GUI_ClearPrect(&info_rect[0]);
-    GUI_DispDec(info_rect[0].x0, info_rect[0].y0, PreheatTemp[THE_PLA][THE_NOZZLE], 3, LEFT);
+    GUI_DispDec(info_rect[0].x0, info_rect[0].y0, PreheatTemp[THE_PREHEAT1][THE_NOZZLE], 3, LEFT);
   }
   {
-    if(ExtUI::getTargetTemp_celsius(ExtUI::BED) == PreheatTemp[THE_PLA][THE_BED]) GUI_SetColor(ORANGE);
+    if(ExtUI::getTargetTemp_celsius(ExtUI::BED) == PreheatTemp[THE_PREHEAT1][THE_BED]) GUI_SetColor(ORANGE);
     else  GUI_SetColor(BLACK);
     GUI_ClearPrect(&info_rect[1]);
-    GUI_DispDec(info_rect[1].x0, info_rect[1].y0, PreheatTemp[THE_PLA][THE_BED], 3, LEFT);
+    GUI_DispDec(info_rect[1].x0, info_rect[1].y0, PreheatTemp[THE_PREHEAT1][THE_BED], 3, LEFT);
   }
   {
-    if(ExtUI::getTargetTemp_celsius(ExtUI::getActiveTool()) == PreheatTemp[THE_ABS][THE_NOZZLE]) GUI_SetColor(ORANGE);
+    if(ExtUI::getTargetTemp_celsius(ExtUI::getActiveTool()) == PreheatTemp[THE_PREHEAT2][THE_NOZZLE]) GUI_SetColor(ORANGE);
     else  GUI_SetColor(BLACK);
     GUI_ClearPrect(&info_rect[2]);
-    GUI_DispDec(info_rect[2].x0, info_rect[2].y0, PreheatTemp[THE_ABS][THE_NOZZLE], 3, LEFT);
+    GUI_DispDec(info_rect[2].x0, info_rect[2].y0, PreheatTemp[THE_PREHEAT2][THE_NOZZLE], 3, LEFT);
   }
   {
-    if(ExtUI::getTargetTemp_celsius(ExtUI::BED) == PreheatTemp[THE_ABS][THE_BED]) GUI_SetColor(ORANGE);
+    if(ExtUI::getTargetTemp_celsius(ExtUI::BED) == PreheatTemp[THE_PREHEAT2][THE_BED]) GUI_SetColor(ORANGE);
     else  GUI_SetColor(BLACK);
     GUI_ClearPrect(&info_rect[3]);
-    GUI_DispDec(info_rect[3].x0, info_rect[3].y0, PreheatTemp[THE_ABS][THE_BED], 3, LEFT);
+    GUI_DispDec(info_rect[3].x0, info_rect[3].y0, PreheatTemp[THE_PREHEAT2][THE_BED], 3, LEFT);
   }
   {
-    if(ExtUI::getTargetTemp_celsius(ExtUI::getActiveTool()) == PreheatTemp[THE_TPU][THE_NOZZLE]) GUI_SetColor(ORANGE);
+    if(ExtUI::getTargetTemp_celsius(ExtUI::getActiveTool()) == PreheatTemp[THE_PREHEAT3][THE_NOZZLE]) GUI_SetColor(ORANGE);
     else  GUI_SetColor(BLACK);
     GUI_ClearPrect(&info_rect[4]);
-    GUI_DispDec(info_rect[4].x0, info_rect[4].y0, PreheatTemp[THE_TPU][THE_NOZZLE], 3, LEFT);
+    GUI_DispDec(info_rect[4].x0, info_rect[4].y0, PreheatTemp[THE_PREHEAT3][THE_NOZZLE], 3, LEFT);
   }
   {
-    if(ExtUI::getTargetTemp_celsius(ExtUI::BED) == PreheatTemp[THE_TPU][THE_BED]) GUI_SetColor(ORANGE);
+    if(ExtUI::getTargetTemp_celsius(ExtUI::BED) == PreheatTemp[THE_PREHEAT3][THE_BED]) GUI_SetColor(ORANGE);
     else  GUI_SetColor(BLACK);
     GUI_ClearPrect(&info_rect[5]);
-    GUI_DispDec(info_rect[5].x0, info_rect[5].y0, PreheatTemp[THE_TPU][THE_BED], 3, LEFT);
+    GUI_DispDec(info_rect[5].x0, info_rect[5].y0, PreheatTemp[THE_PREHEAT3][THE_BED], 3, LEFT);
   }
   
   GUI_SetColor(FK_COLOR);
@@ -209,6 +209,9 @@ void menuCallBackPreHeat() {
 void menuPreheat(void)
 {
   menuDrawPage(&preheatItems);
+  menuDrawItemLabel(PREHEAT_1_LABEL, 0);
+  menuDrawItemLabel(PREHEAT_2_LABEL, 1);
+  menuDrawItemLabel(PREHEAT_3_LABEL, 2);
   drawTemperatureColor();
   menuSetFrontCallBack(menuCallBackPreHeat);
 }

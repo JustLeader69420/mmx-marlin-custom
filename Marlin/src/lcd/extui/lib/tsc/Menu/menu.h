@@ -268,6 +268,7 @@ void volumeReminderMessage(int16_t inf, SYS_STATUS status);
 
 void menuDrawListItem(const LISTITEM *item, uint8_t position);
 void menuDrawItem (const ITEM *menuItem, uint8_t positon);
+void menuDrawItemLabel (const uint8_t*, uint8_t positon);
 void menuDrawTitle(const uint8_t *content);
 void menuDrawPage (const MENUITEMS *menuItems);
 void menuDrawCubeItem_check(const uint8_t *icon, uint8_t position);

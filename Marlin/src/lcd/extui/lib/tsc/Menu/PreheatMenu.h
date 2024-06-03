@@ -11,9 +11,9 @@
 #define INFO_OFFSET_Y1  61
 
 enum{
-    THE_PLA=0,
-    THE_ABS,
-    THE_TPU,
+    THE_PREHEAT1=0, //was PLA
+    THE_PREHEAT2,   //was ABS
+    THE_PREHEAT3,   //was TPU
     THE_MATERIAL_NUM,
 };  // 枚举材料
 typedef enum
@@ -28,7 +28,7 @@ enum{
 };
 
 extern uint16_t PreheatTemp[THE_MATERIAL_NUM][2];
-const uint16_t originalPreheatTemp[THE_MATERIAL_NUM][2] = {{75, 210}, {95, 255}, {80,220}};
+const uint16_t originalPreheatTemp[THE_MATERIAL_NUM][2] = {{PREHEAT_1_TEMP_BED, PREHEAT_1_TEMP_HOTEND}, {PREHEAT_2_TEMP_BED, PREHEAT_2_TEMP_HOTEND}, {PREHEAT_3_TEMP_BED,PREHEAT_3_TEMP_HOTEND}};
 extern const GUI_RECT info_rect[];
 
 void menuPreheat(void);
