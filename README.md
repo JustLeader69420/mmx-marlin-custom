@@ -21,8 +21,6 @@ These are my edits of the MMX firmware, enjoy.
    - Find under main status screen > Functions, or if using old status screen, under main status screen > Menu > Settings > Functions
    - Added button to resume print after M600 pause when not printing from inserted media (ex. OctoPrint/USB)
    - Added button to calibrate touchscreen without having to create the reset.txt file
-     - might be a little buggy
-       - I believe that at the moment the machine crashes and reboots when there is no action 
  - Because of the menu modifications, a few icons have been enabled, which previously only existed in the TFT35 folder, but weren't used when updating icons, if you see empty icons, download a TFT35 theme folder from either Mingda, or ![my themes repository](https://git.justleader.eu/justleader/mmx-marlin-themes), then install them.
  - Make Preheat filament types changeable (for now only in sourcecode before building) in Configuration.h
  - \+ there might be a few more changes, I try to add them to the list when they are finished
@@ -87,8 +85,6 @@ These are my edits of the MMX firmware, enjoy.
  - when USEOLDSTATUSSCREEN, put Functions menu to a new Other settings menu, where we can put more settings, maybe multiple pages, or a settings list?
  - Make more modifications undoable?
    - Centering print menu icons
- - Add touchscreen calibration button to Menu>Settings, because when the icon is there, might as well
-   - Change a variable and reset to calibrate on boot? If you don't begin the calibration fast enough when opened through the menu, it seems the machine crashes and just reboots
  - Add reset settings button somewhere
  - GCODE to resume print from terminal?
  - Add GCODE to manipulate all the settings currently only available on the touchscreen?
