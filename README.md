@@ -97,6 +97,7 @@ These are my edits of the MMX firmware, enjoy.
  - respect silent mode setting when beeping
  - Custom GCODE to change all menu settings
    - also things like preheat filament types (custom filament name)
+ - Temperature, Fan speed lock buttons to prevent GCODE changing custom settings
 
 
 # Original README.md
