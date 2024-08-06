@@ -83,7 +83,8 @@ These are my edits of the MMX firmware, enjoy.
  - Screen auto off timer?
    - probably located in Menu/Settings/Other settings/
  - Temperature, Fan speed lock buttons to prevent GCODE changing custom settings
- - Start with screen on/off button
+ - "Start with screen on/off" button
+ - Add confirmation to Leveling button (missclick when printing from octoprint, pisses me off that it bypasses octoprint)
  - when USEOLDSTATUSSCREEN, put Functions menu to a new Other settings menu, where we can put more settings, maybe multiple pages, or a settings list?
  - Make more modifications undoable?
    - Centering print menu icons
