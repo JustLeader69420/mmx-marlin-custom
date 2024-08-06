@@ -82,6 +82,8 @@ These are my edits of the MMX firmware, enjoy.
  - Add status message to in-print menu
  - Screen auto off timer?
    - probably located in Menu/Settings/Other settings/
+ - Temperature, Fan speed lock buttons to prevent GCODE changing custom settings
+ - Start with screen on/off button
  - when USEOLDSTATUSSCREEN, put Functions menu to a new Other settings menu, where we can put more settings, maybe multiple pages, or a settings list?
  - Make more modifications undoable?
    - Centering print menu icons
@@ -97,7 +99,6 @@ These are my edits of the MMX firmware, enjoy.
  - respect silent mode setting when beeping
  - Custom GCODE to change all menu settings
    - also things like preheat filament types (custom filament name)
- - Temperature, Fan speed lock buttons to prevent GCODE changing custom settings
 
 
 # Original README.md
