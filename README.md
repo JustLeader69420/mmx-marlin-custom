@@ -74,7 +74,7 @@ These are my edits of the MMX firmware, enjoy.
   - Uncomment `#define USEOLDSTATUSSCREEN` at the top in Marlin/Configuration.h, custom settings are at the top, before the Marlin configuration
 
 ## Current issues
- - When opening Functions menu, Storage Select menu shows first, then only after clicking back, the custom menu opens
+ - None that I know of
 
 ## TODO
  - Try to fix weird font when Czech language
